@@ -1,8 +1,8 @@
-/* Tesla Style Energy Flow
+/* Audi Style Energy Flow
  * Public Home Assistant custom card with configurable sensors, background, and flow paths.
  */
 (function () {
-  const CARD_TYPE = 'tesla-style-energy-flow';
+  const CARD_TYPE = 'audi-style-energy-flow';
   const FLOW_MIN_W = 50;
   const SUPPORTED_LANGS = ['it', 'en', 'es', 'fr', 'de'];
   const DEFAULT_LANG = 'it';
@@ -82,7 +82,7 @@
     },
     en: {
       card: {
-        default_title: 'Tesla Style Energy Flow',
+        default_title: 'Audi Style Energy Flow',
         node: {
           solar: 'Solar',
           grid: 'Grid',
@@ -868,7 +868,7 @@
 
   const DEFAULT_CONFIG = Object.freeze({
     type: `custom:${CARD_TYPE}`,
-    title: 'Tesla Style Energy Flow',
+    title: 'Audi Style Energy Flow',
     language: 'auto',
     background: '/local/community/tesla-style-energy-flow/backgrounds/scene_day_clear_idle.png',
     dynamic_background: true,
@@ -2449,7 +2449,7 @@
   if (!window.customCards.find((c) => c.type === CARD_TYPE)) {
     window.customCards.push({
       type: CARD_TYPE,
-      name: 'Tesla Style Energy Flow',
+      name: 'Audi Style Energy Flow',
       description: 'Flow card with background, configurable entities, and color logic.'
     });
   }
