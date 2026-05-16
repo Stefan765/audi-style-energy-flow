@@ -1,4 +1,4 @@
-# Tesla Style Energy Flow
+# Audi Style Energy Flow
 
 Custom Home Assistant Lovelace card for energy flows on a house scene, with dynamic weather/day-night backgrounds and EV-aware layout switching.
 
