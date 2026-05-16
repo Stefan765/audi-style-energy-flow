@@ -1,9 +1,9 @@
-type: custom:tesla-style-energy-flow
-title: Tesla Style Energy Flow
+type: custom:audi-style-energy-flow
+title: Audi Style Energy Flow
 language: auto
-background: /local/community/tesla-style-energy-flow/backgrounds/scene_day_clear_idle.png
+background: /local/community/audi-style-energy-flow/backgrounds/scene_day_clear_idle.png
 dynamic_background: true
-background_asset_base: /local/community/tesla-style-energy-flow/backgrounds
+background_asset_base: /local/community/audi-style-energy-flow/backgrounds
 grid_invert: true
 ev_hide_when_idle: false
 thresholds:
