@@ -870,9 +870,9 @@
     type: `custom:${CARD_TYPE}`,
     title: 'Audi Style Energy Flow',
     language: 'auto',
-    background: '/local/community/tesla-style-energy-flow/backgrounds/scene_day_clear_idle.png',
+    background: '/local/community/audi-style-energy-flow/backgrounds/scene_day_clear_idle.png',
     dynamic_background: true,
-    background_asset_base: '/local/community/tesla-style-energy-flow/backgrounds',
+    background_asset_base: '/local/community/audi-style-energy-flow/backgrounds',
     show_header: true,
     show_labels: true,
     power_unit_mode: 'auto',
@@ -1109,7 +1109,7 @@
 
   class EnergyFlowProCard extends HTMLElement {
     static getConfigElement() {
-      return document.createElement('tesla-style-energy-flow-editor');
+      return document.createElement('audi-style-energy-flow-editor');
     }
 
     static getStubConfig() {
@@ -1342,7 +1342,7 @@
     }
 
     _defaultBackgroundMap() {
-      const base = this._config.background_asset_base || '/local/community/tesla-style-energy-flow/backgrounds';
+      const base = this._config.background_asset_base || '/local/community/audi-style-energy-flow/backgrounds';
       const out = {};
       Object.entries(SCENE_IMAGE_MAP).forEach(([k, v]) => {
         out[k] = joinAsset(base, v);
@@ -1420,7 +1420,7 @@
         ? (hasSecondaryEv ? DUAL_CHARGING_SCENE_IMAGE_MAP.day_clear_dual_charging : SCENE_IMAGE_MAP.day_clear_charging)
         : SCENE_IMAGE_MAP.day_clear_idle;
       const legacyFallback = joinAsset(
-        cfg.background_asset_base || '/local/community/tesla-style-energy-flow/backgrounds',
+        cfg.background_asset_base || '/local/community/audi-style-energy-flow/backgrounds',
         fallbackFile
       );
       if (legacyFallback) return legacyFallback;
@@ -2287,7 +2287,7 @@
               <label>${this._t('editor.field_background', 'Background URL')}</label>
               <input data-path="background" value="${cfg.background || ''}">
               <label>${this._t('editor.field_background_base', 'Background Assets Base (auto)')}</label>
-              <input data-path="background_asset_base" value="${cfg.background_asset_base || '/local/community/tesla-style-energy-flow/backgrounds'}">
+              <input data-path="background_asset_base" value="${cfg.background_asset_base || '/local/community/audi-style-energy-flow/backgrounds'}">
               ${this._powerUnitModeRow()}
               <div class="row">
                 <label>${this._t('editor.field_grid_invert', 'Invert grid sign')}</label>
@@ -2441,8 +2441,8 @@
   if (!customElements.get(CARD_TYPE)) {
     customElements.define(CARD_TYPE, EnergyFlowProCard);
   }
-  if (!customElements.get('tesla-style-energy-flow-editor')) {
-    customElements.define('tesla-style-energy-flow-editor', EnergyFlowProCardEditor);
+  if (!customElements.get('audi-style-energy-flow-editor')) {
+    customElements.define('audi-style-energy-flow-editor', EnergyFlowProCardEditor);
   }
 
   window.customCards = window.customCards || [];
