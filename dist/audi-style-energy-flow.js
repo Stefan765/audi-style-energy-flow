@@ -478,9 +478,9 @@
       'line-wallbox-ev2': 'M 150 314 Q 128 312 112 318'
     }),
     'scene_night_clear_charging.png': Object.freeze({
-      'line-solar-load': 'M 376 278 L 382 322 L 432 312',
-      'line-solar-grid': 'M 378 282 L 382 360 L 480 392',
-      'line-solar-battery': 'M 378 280 L 380 324 L 332 330',
+      'line-solar-load': 'M 622 438 L 622 606 L 720 606',
+      'line-solar-grid': 'M 622 438 L 622 606 L 640 606',
+      'line-solar-battery': 'M 622 438 L 622 606 L 560 606 L 560 720',
       'line-grid-load': 'M 478 390 Q 454 384 382 360 Q 382 334 382 326',
       'line-grid-battery': 'M 482 394 L 384 360',
       'line-battery-load': 'M 336 330 Q 380 324 382 322',
