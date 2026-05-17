@@ -481,11 +481,11 @@
       'line-solar-load': 'M 622 438 L 622 606 L 720 606',
       'line-solar-grid': 'M 622 438 L 622 606 L 640 606',
       'line-solar-battery': 'M 622 438 L 622 606 L 560 606 L 560 720',
-      'line-grid-load': 'M 478 390 Q 454 384 382 360 Q 382 334 382 326',
-      'line-grid-battery': 'M 482 394 L 384 360',
-      'line-battery-load': 'M 336 330 Q 380 324 382 322',
-      'line-junction-home-load': 'M 382 322 Q 416 316 434 310',
-      'line-wallbox-ev': 'M 192 304 Q 184 352 206 326',
+      'line-grid-load': 'M 640 606 L 720 606',
+      'line-grid-battery': 'M 640 606 L 560 606 L 560 720',
+      'line-battery-load': 'M 560 720 L 560 606 L 720 606',
+      'line-junction-home-load': 'M 640 606 L 720 606',
+      'line-wallbox-ev': 'M 274 620 Q 262 680 332 666',
       'line-wallbox-ev2': 'M 180 294 Q 148 286 118 300'
     }),
     'scene_night_clear_dual_charging.png': Object.freeze({
