@@ -356,7 +356,7 @@
     day_storm_idle: 'scene_day_clear_idle.png',
     night_clear_charging: 'scene_night_clear_charging.png',
     night_clear_idle: 'scene_night_clear_idle.png',
-    night_cloudy_charging: 'scene_night_clear_charging.png',
+    night_cloudy_charging: 'scene_night_cloudy_charging.png',
     night_cloudy_idle: 'scene_night_clear_idle.png',
     night_rain_charging: 'scene_night_rain_charging.png',
     night_rain_idle: 'scene_night_rain_idle.png',
@@ -494,6 +494,19 @@
     
       'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
     
+      'line-wallbox-ev2': 'M 148 312 Q 126 310 112 316'
+    }),
+    'scene_night_cloudy_charging.png': Object.freeze({
+      'line-solar-load': 'M 351 292 L 352 338 L 352 338',
+      'line-solar-grid': 'M 350 292 L 352 376 L 436 404',
+      'line-solar-battery': 'M 350 292 L 352 338 L 312 348',
+    
+      'line-grid-load': 'M 434 402 Q 434 402 351 375 Q 352 340 351 341',
+      'line-grid-battery': 'M 436 404 L 352 376',
+      'line-battery-load': 'M 310 348 Q 353 339 352 338',
+    
+      'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
+      'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
       'line-wallbox-ev2': 'M 148 312 Q 126 310 112 316'
     }),
     'scene_night_clear_dual_charging.png': Object.freeze({
