@@ -2,7 +2,7 @@
  * Public Home Assistant custom card with configurable sensors, background, and flow paths.
  */
 (function () {
-  const CARD_TYPE = 'tesla-style-energy-flow';
+  const CARD_TYPE = 'audi-style-energy-flow';
   const FLOW_MIN_W = 50;
   const EDITOR_UPDATE_DEBOUNCE_MS = 500;
   const SUPPORTED_LANGS = ['it', 'en', 'es', 'fr', 'de'];
