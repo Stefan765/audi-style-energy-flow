@@ -3726,8 +3726,8 @@
   if (!customElements.get(CARD_TYPE)) {
     customElements.define(CARD_TYPE, EnergyFlowProCard);
   }
-  if (!customElements.get('tesla-style-energy-flow-editor')) {
-    customElements.define('tesla-style-energy-flow-editor', EnergyFlowProCardEditor);
+  if (!customElements.get('audi-style-energy-flow-editor')) {
+    customElements.define('audi-style-energy-flow-editor', EnergyFlowProCardEditor);
   }
 
   window.customCards = window.customCards || [];
