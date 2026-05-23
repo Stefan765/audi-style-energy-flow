@@ -495,15 +495,15 @@
   });
 
     const DAY_CLOUDY_CHARGING_PATHS = Object.freeze({
-      'line-solar-load': 'M 351 292 L 352 338 L 352 338',
-      'line-solar-grid': 'M 350 292 L 352 378 L 436 404',
-      'line-solar-battery': 'M 350 292 L 352 340 L 310 348',
-      'line-grid-load': 'M 434 402 Q 434 402 351 375 Q 352 340 351 341',
-      'line-grid-battery': 'M 352 338 L 310 348',
-      'line-battery-load': 'M 310 348 Q 353 339 352 338',
-      'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
-      'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
-      'line-wallbox-ev2': 'M 148 312 Q 126 310 112 316'
+      'line-solar-load': 'M 380 272 L 382 316 L 436 304',
+      'line-solar-grid': 'M 380 272 L 382 354 L 468 378',
+      'line-solar-battery': 'M 380 276 L 382 314 L 334 324',
+      'line-grid-load': 'M 464 378 Q 464 376 382 354 Q 382 336 382 314',
+      'line-grid-battery': 'M 468 378 L 384 354',
+      'line-battery-load': 'M 336 324 Q 368 318 382 314',
+      'line-junction-home-load': 'M 382 314 Q 410 308 438 302',
+      'line-wallbox-ev': 'M 174 296 Q 164 342 188 314',
+      'line-wallbox-ev2': 'M 164 286 Q 134 280 106 292'
   });
 
   const DAY_CLEAR_CHARGING_PATHS = Object.freeze({
