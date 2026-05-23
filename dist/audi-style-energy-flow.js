@@ -482,7 +482,7 @@
       'line-wallbox-ev2': 'M 148 312 Q 126 310 112 316'
   });
 
-  const DAY_CLOUDY_CHARGING_PATHS = Object.freeze({
+  const DAY_CLEAR_CHARGING_PATHS = Object.freeze({
       'line-solar-load': 'M 351 292 L 352 338 L 352 338',
       'line-solar-grid': 'M 350 292 L 352 374 L 434 402',
       'line-solar-battery': 'M 350 292 L 352 338 L 312 348',
