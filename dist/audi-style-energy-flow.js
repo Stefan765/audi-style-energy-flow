@@ -523,7 +523,7 @@
       'line-wallbox-ev': 'M 164 314 Q 160 368 182 344',
       'line-wallbox-ev2': 'M 148 304 Q 126 302 112 308'
     }),
-    'scene_day_cloudy_charging.png': Object.freeze({
+    'scene_day_rain_charging.png': Object.freeze({
       'line-solar-load': 'M 380 272 L 382 316 L 436 304',
       'line-solar-grid': 'M 380 272 L 382 354 L 468 378',
       'line-solar-battery': 'M 380 276 L 382 314 L 334 324',
