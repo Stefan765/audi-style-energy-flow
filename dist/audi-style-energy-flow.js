@@ -534,6 +534,8 @@
     'scene_day_clear_idle.png': DAY_CLEAR_IDLE_PATHS,
     'scene_day_clear_charging.png': DAY_CLEAR_CHARGING_PATHS,
     'scene_day_clear_dual_charging.png': DAY_CLEAR_DUAL_CHARGING_PATHS,
+    'scene_day_cloudy_idle.png': DAY_CLOUDY_IDLE_PATHS,
+    'scene_day_cloudy_charging.png': DAY_CLOUDY_CHARGING_PATHS,
     'image2.png': DAY_CLEAR_IDLE_PATHS,
     'image.png': DAY_CLEAR_CHARGING_PATHS,
     'scene_day_rain_idle.png': Object.freeze({
