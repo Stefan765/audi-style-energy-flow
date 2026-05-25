@@ -1014,7 +1014,7 @@
 
   const DEFAULT_CONFIG = Object.freeze({
     type: `custom:${CARD_TYPE}`,
-    title: 'Tesla Style Energy Flow',
+    title: 'Audi Style Energy Flow',
     language: 'auto',
     background: '/local/community/audi-style-energy-flow/backgrounds/scene_day_clear_idle.png',
     dynamic_background: true,
