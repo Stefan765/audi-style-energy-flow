@@ -468,10 +468,10 @@
   const DUAL_CHARGING_SCENE_IMAGE_MAP = Object.freeze({
     day_clear_dual_charging: 'scene_day_clear_dual_charging.png',
     day_cloudy_dual_charging: 'scene_day_cloudy_charging.png',
-    day_rain_dual_charging: 'scene_day_rain_dual_charging.png',
+    day_rain_dual_charging: 'scene_day_rain_charging.png',
     day_snow_dual_charging: 'scene_day_clear_dual_charging.png',
     day_storm_dual_charging: 'scene_day_clear_dual_charging.png',
-    night_clear_dual_charging: 'scene_night_clear_dual_charging.png',
+    night_clear_dual_charging: 'scene_night_clear_charging.png',
     night_cloudy_dual_charging: 'scene_night_clear_dual_charging.png',
     night_rain_dual_charging: 'scene_night_rain_dual_charging.png',
     night_snow_dual_charging: 'scene_night_clear_dual_charging.png',
@@ -703,7 +703,7 @@
     'ev-power': Object.freeze({ x: 22, y: -84 }),
     'ev-pct': Object.freeze({ x: 41, y: -5 }),
     'ev-guide': Object.freeze({ x1: 0, y1: -98, x2: 0, y2: 4 }),
-    'ev2-label': Object.freeze({ x: -46, y: -101 }),
+    'ev2-label': Object.freeze({ x: 30, y: 105 }),
     'ev2-power': Object.freeze({ x: -41, y: -85 }),
     'ev2-pct': Object.freeze({ x: -30, y: -42 }),
     'ev2-guide': Object.freeze({ x1: -47, y1: -75, x2: -47, y2: -17 })
