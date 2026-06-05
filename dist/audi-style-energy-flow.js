@@ -1637,10 +1637,10 @@
 
     _weatherGroup(weatherState) {
       const s = String(weatherState || '').toLowerCase();
-      if (s === 'lightning') return 'storm';
+      if (s === 'lightning' || s === 'windy' || s === 'windy-variant') return 'storm';
       if (s === 'rainy' || s === 'pouring' || s === 'lightning-rainy') return 'rain';
       if (s === 'snowy' || s === 'snowy-rainy' || s === 'hail') return 'snow';
-      if (s === 'cloudy' || s === 'partlycloudy' || s === 'fog' || s === 'windy' || s === 'windy-variant') return 'cloudy';
+      if (s === 'cloudy' || s === 'partlycloudy' || s === 'fog') return 'cloudy';
       return 'clear';
     }
 
