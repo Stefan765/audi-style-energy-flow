@@ -524,7 +524,7 @@
       'line-battery-load': 'M 310 348 Q 353 339 352 338',
       'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
       'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
   });
 
   const DAY_CLEAR_CHARGING_PATHS = Object.freeze({
@@ -536,7 +536,7 @@
       'line-battery-load': 'M 310 348 Q 353 339 352 338',
       'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
       'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
   });
 
   const DAY_CLEAR_DUAL_CHARGING_PATHS = Object.freeze({
@@ -548,7 +548,7 @@
       'line-battery-load': 'M 355 347 Q 383 342 398 338',
       'line-junction-home-load': 'M 401 338 Q 428 332 456 325',
       'line-wallbox-ev': 'M 203 323 Q 200 381 220 340',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
   });
 
   const SCENE_FLOW_PATH_MAP = Object.freeze({
@@ -566,7 +566,7 @@
       'line-battery-load': 'M 310 342 Q 352 334 352 330',
       'line-junction-home-load': 'M 350 332 Q 386 326 410 318',
       'line-wallbox-ev': 'M 164 314 Q 160 368 182 344',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_day_rain_charging.png': Object.freeze({
       'line-solar-load': 'M 380 272 L 382 316 L 436 304',
@@ -577,7 +577,7 @@
       'line-battery-load': 'M 336 324 Q 368 318 382 314',
       'line-junction-home-load': 'M 382 314 Q 410 308 438 302',
       'line-wallbox-ev': 'M 174 296 Q 164 342 188 314',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_day_rain_dual_charging.png': Object.freeze({
       'line-solar-load': 'M 398 291 L 400 305 400 337',
@@ -588,7 +588,7 @@
       'line-battery-load': 'M 354 348 Q 380 342 401 338',
       'line-junction-home-load': 'M 400 337 Q 427 331 458 324',
       'line-wallbox-ev': 'M 204 322 Q 202 376 216 345',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_night_clear_idle.png': Object.freeze({
       'line-solar-load': 'M 351 292 L 352 338 L 352 338',
@@ -599,7 +599,7 @@
       'line-battery-load': 'M 310 348 Q 353 339 352 338',
       'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
       'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_night_clear_charging.png': Object.freeze({
       'line-solar-load': 'M 376 278 L 382 322 L 432 312',
@@ -610,7 +610,7 @@
       'line-battery-load': 'M 336 330 Q 380 324 382 322',
       'line-junction-home-load': 'M 382 322 Q 416 316 434 310',
       'line-wallbox-ev': 'M 192 304 Q 184 352 206 326',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_night_clear_dual_charging.png': Object.freeze({
       'line-solar-load': 'M 397 289 L 401 305 401 336',
@@ -621,7 +621,7 @@
       'line-battery-load': 'M 353 346 Q 383 340 400 336',
       'line-junction-home-load': 'M 402 336 Q 435 329 458 323',
       'line-wallbox-ev': 'M 204 321 Q 199 376 221 341',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_night_rain_idle.png': Object.freeze({
       'line-solar-load': 'M 351 292 L 352 338 L 352 338',
@@ -632,7 +632,7 @@
       'line-battery-load': 'M 310 330 Q 354 322 354 322',
       'line-junction-home-load': 'M 352 324 Q 388 316 406 312',
       'line-wallbox-ev': 'M 166 310 Q 160 354 184 334',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_night_rain_charging.png': Object.freeze({
       'line-solar-load': 'M 351 292 L 352 338 L 352 338',
@@ -643,7 +643,7 @@
       'line-battery-load': 'M 310 348 Q 353 339 352 338',
       'line-junction-home-load': 'M 352 334 Q 386 326 410 320',
       'line-wallbox-ev': 'M 164 314 Q 160 356 182 332',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     }),
     'scene_night_rain_dual_charging.png': Object.freeze({
       'line-solar-load': 'M 396 287 L 398 300 398 338',
@@ -654,7 +654,7 @@
       'line-battery-load': 'M 355 347 Q 382 342 401 337',
       'line-junction-home-load': 'M 401 336 Q 431 329 458 323',
       'line-wallbox-ev': 'M 204 322 Q 199 380 223 338',
-      'line-wallbox-ev2': 'M 511 413 Q 454 397 401 378 400 356 399 337',
+      'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
     })
   });
 
