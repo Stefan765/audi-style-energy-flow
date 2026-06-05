@@ -2629,7 +2629,7 @@
       this._setText('#flow-ev2-power', this._formatKW(ev2.power || 0));
       const ev2Arrow = ((ev2.power || 0) > 0 || ev2.switchOn) ? 'Ã¢â€“Â²' : '';
       this._setText('#flow-ev2-arrow', ev2Arrow);
-      this._setText('#flow-ev2-pct', ev2.batteryText || '--%');
+      
 
       const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       if (batteryStatusEl) {
