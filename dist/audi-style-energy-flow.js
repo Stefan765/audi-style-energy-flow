@@ -409,7 +409,7 @@
         field_grid_invert: 'Netz-Vorzeichen invertieren',
         field_ev_in_load: 'EV-Leistung bereits im Hausverbrauch enthalten',
         field_ev2_in_load: 'EV 2 Leistung bereits im Hausverbrauch enthalten',
-        field_smoothing: 'GlÃƒÆ’Ã‚Â¤ttung (Sek, 0 = aus)',
+        field_smoothing: 'GlÃ¤ttung (Sek, 0 = aus)',
         field_show_labels: 'Labels anzeigen',
         field_hide_ev_idle: 'EV ausblenden wenn nicht laedt',
         field_scene_scale: 'Szenen-Skalierung',
@@ -455,7 +455,7 @@
         position_close_button: 'Schliessen',
         position_field_scene: 'Szene',
         position_copy_from: 'Positionen kopieren von',
-        position_copy_button: 'ÃƒÆ’Ã…â€œbernehmen',
+        position_copy_button: 'Ãœbernehmen',
         position_field_label: 'Beschriftung',
         position_field_value: 'Wert',
         position_field_guide_a: 'Linie A',
@@ -1041,8 +1041,8 @@
     ev2_in_load: false,
     // Tesla-style EWMA smoothing on solar / grid / battery / load values to
     // tame the visual jumpiness caused by clouds, EV regulation, etc.
-    // 0 = off (raw live values). Typical: 10. Range: 0ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“60 seconds.
-    // EV power is intentionally NOT smoothed ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â charging start/stop should
+    // 0 = off (raw live values). Typical: 10. Range: 0â€“60 seconds.
+    // EV power is intentionally NOT smoothed â€” charging start/stop should
     // be visible immediately.
     smoothing_seconds: 0,
     ev_label: '',
@@ -2519,7 +2519,7 @@
       const batteryConfigured = !!(cfg.entities.battery_power || cfg.entities.battery_level);
       const evData = this._collectEvData();
 
-      // Whole-home meters (SMA SHM 2.0, SolarEdge total_consumption, ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦) usually
+      // Whole-home meters (SMA SHM 2.0, SolarEdge total_consumption, â€¦) usually
       // already include the wallbox draw in load_power. When the user also
       // configures ev_power / ev2_power, the card would double-count and starve
       // the battery in the allocation. Subtract the per-vehicle power (RAW
@@ -2539,9 +2539,9 @@
 
       // EWMA smoothing applied AFTER all sign / unit / ev_in_load corrections.
       // EV power is also smoothed (per-vehicle) because EV regulation jitter
-      // is the dominant source of allocation flicker ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â without this the
+      // is the dominant source of allocation flicker â€” without this the
       // allocated solarToEv / solarToBattery / gridToLoad shift every render.
-      // Trade-off: EV charge start/stop becomes visible over ~1.5 ÃƒÆ’Ã¢â‚¬â€ tau.
+      // Trade-off: EV charge start/stop becomes visible over ~1.5 Ã— tau.
       solarPower = this._smooth('solar', solarPower);
       gridPower = this._smooth('grid', gridPower);
       batteryPower = this._smooth('battery', batteryPower);
@@ -2612,12 +2612,12 @@
       this._setText('#flow-roof-b-current', `${roofBCurrent.toFixed(1)} A`);
       this._setText('#flow-load-power', this._formatKW(loadPower));
       this._setText('#flow-battery-power', batteryConfigured ? this._formatKW(batteryPower) : '');
-      const batteryArrow = !batteryConfigured ? '' : (batteryPower > batteryMin ? 'ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â²' : (batteryPower < -batteryMin ? 'ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¼' : ''));
+      const batteryArrow = !batteryConfigured ? '' : (batteryPower > batteryMin ? 'â–²' : (batteryPower < -batteryMin ? 'â–¼' : ''));
       this._setText('#flow-battery-arrow', batteryArrow);
       this._setText('#flow-battery-pct', batteryConfigured ? `${Math.round(batteryLevel)}%` : '');
       this._setText('#flow-ev-label', ev1.labelText || this._t('card.node.ev', 'EV'));
       this._setText('#flow-ev-power', this._formatKW(ev1.power || 0));
-      const ev1Arrow = ((ev1.power || 0) > 0 || ev1.switchOn) ? 'ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â²' : '';
+      const ev1Arrow = ((ev1.power || 0) > 0 || ev1.switchOn) ? 'â–²' : '';
       this._setText('#flow-ev-arrow', ev1Arrow);
       this._setText('#flow-ev-pct', ev1.batteryText || '--%');
       this._setText('#flow-ev2-label', ev2.labelText || 'EV 2');
@@ -2710,7 +2710,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       // Only activate one direction at a time to avoid the two calls overwriting each other's flow-reverse flag.
       if (batteryToGrid >= Math.max(1, Math.min(gridMin, batteryMin)) && gridImportVisual < gridMin) {
         // Battery is exporting to grid and grid is NOT simultaneously importing above threshold:
-        // show batteryÃƒÂ¢Ã¢â‚¬ Ã¢â‚¬â„¢junctionÃƒÂ¢Ã¢â‚¬ Ã¢â‚¬â„¢grid (reverse on this path)
+        // show batteryâ†’junctionâ†’grid (reverse on this path)
         this._activatePath('line-grid-load', 'flow-green', batteryToGrid, Math.max(1, Math.min(gridMin, batteryMin)), true);
       } else {
         // Normal grid import (or both: grid import dominates, battery export is low/zero)
@@ -2725,7 +2725,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
 
       this._activatePath('line-solar-battery', 'flow-solar', solarToBattery, batteryMin);
       this._activatePath('line-grid-battery', 'flow-broken', gridToBattery, batteryMin);
-      // line-solar-grid: only solar export; batteryÃƒÂ¢Ã¢â‚¬ Ã¢â‚¬â„¢grid is shown via line-battery-load + line-grid-load (reverse)
+      // line-solar-grid: only solar export; batteryâ†’grid is shown via line-battery-load + line-grid-load (reverse)
       this._activatePath('line-solar-grid', 'flow-green', solarExport, Math.max(1, gridMin));
 
       const evTotal = solarToEv + battToEv + gridToEv;
@@ -2770,7 +2770,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       this._positionDrag = null;
       this._positionEditorOpen = false;
       // Empty so _selectedPositionScene() falls back to the user's configured
-      // background ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â opening the editor lands on the scene they actually see.
+      // background â€” opening the editor lands on the scene they actually see.
       this._positionSceneKey = '';
     }
 
@@ -2940,7 +2940,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
           values.map((id) => {
             const selected = id === current ? ' selected' : '';
             const friendlyName = this._hass?.states[id]?.attributes?.friendly_name;
-            const displayText = friendlyName ? `${friendlyName} Ãƒâ€šÃ‚Â· ${id}` : id;
+            const displayText = friendlyName ? `${friendlyName} Â· ${id}` : id;
             return `<option value="${this._escapeHtml(id)}"${selected}>${this._escapeHtml(displayText)}</option>`;
           })
         )
@@ -3449,7 +3449,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       const sunIds = this._entityIdsByDomain('sun');
       const cfg = this._config;
       const b = cfg.background_map || {};
-      // Filtered lists for common field types ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â reduces long dropdowns to plausible matches.
+      // Filtered lists for common field types â€” reduces long dropdowns to plausible matches.
       const powerIds = (path) => this._sensorIdsByUnitOrClass(['W', 'kW'], ['power'], String(this._getByPath(path) || ''));
       const pctIds = (path) => this._sensorIdsByUnitOrClass(['%'], ['battery'], String(this._getByPath(path) || ''));
       const voltIds = (path) => this._sensorIdsByUnitOrClass(['V'], ['voltage'], String(this._getByPath(path) || ''));
@@ -3859,7 +3859,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
         </style>
         <div class="wrap">
 
-          <!-- ÃƒÂ¢Ã¢â‚¬Ëœ  General -->
+          <!-- â‘  General -->
           <div class="block">
             <h4>${this._t('editor.section_general', 'General')}</h4>
             <div class="grid">
@@ -3888,7 +3888,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â¡ Visual layout editor ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â prominent, at the top -->
+          <!-- â‘¡ Visual layout editor â€” prominent, at the top -->
           <div class="block">
             <h4>${this._t('editor.section_scene_positions', 'Scene positions')}</h4>
             <div class="visual-editor-btn-wrap">
@@ -3901,9 +3901,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </details>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â¢ Solar sensors -->
+          <!-- â‘¢ Solar sensors -->
           <div class="block">
-            <h4>ÃƒÂ¢Ã‹Å“Ã¢â€šÂ¬ÃƒÂ¯Ã‚Â¸Ã‚Â Solar</h4>
+            <h4>â˜€ï¸ Solar</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_solar', 'Solar Power'), 'entities.solar_power', powerIds('entities.solar_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
             </div>
@@ -3920,11 +3920,11 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </details>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â£ Grid sensors -->
+          <!-- â‘£ Grid sensors -->
           <div class="block">
-            <h4>ÃƒÂ¢Ã…Â¡Ã‚Â¡ Grid</h4>
+            <h4>âš¡ Grid</h4>
             <div class="grid">
-              <span class="group-label">Combined sensor (+ = import, ÃƒÂ¢Ã‹â€ Ã¢â‚¬â„¢ = export)</span>
+              <span class="group-label">Combined sensor (+ = import, âˆ’ = export)</span>
               ${this._entitySelectRow(this._t('editor.sensor_grid', 'Grid Power'), 'entities.grid_power', powerIds('entities.grid_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.grid_import_power || cfg.entities?.grid_export_power) ? '' : `
               <div class="row">
@@ -3932,18 +3932,18 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
                 <input type="checkbox" data-path="grid_invert" ${cfg.grid_invert ? 'checked' : ''}>
               </div>`}
               <hr class="group-divider">
-              <span class="group-label">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â or ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â separate sensors (always positive)</span>
+              <span class="group-label">â€” or â€” separate sensors (always positive)</span>
               ${this._entitySelectRow(this._t('editor.sensor_grid_import', 'Grid Import Power'), 'entities.grid_import_power', powerIds('entities.grid_import_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${this._entitySelectRow(this._t('editor.sensor_grid_export', 'Grid Export Power'), 'entities.grid_export_power', powerIds('entities.grid_export_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.grid_import_power || cfg.entities?.grid_export_power) ? `<span class="note">grid_invert not needed when using separate import/export sensors</span>` : ''}
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â¤ Battery sensors -->
+          <!-- â‘¤ Battery sensors -->
           <div class="block">
-            <h4>ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂÃ¢â‚¬Â¹ Battery</h4>
+            <h4>ðŸ”‹ Battery</h4>
             <div class="grid">
-              <span class="group-label">Combined sensor (+ = charging, ÃƒÂ¢Ã‹â€ Ã¢â‚¬â„¢ = discharging)</span>
+              <span class="group-label">Combined sensor (+ = charging, âˆ’ = discharging)</span>
               ${this._entitySelectRow(this._t('editor.sensor_battery', 'Battery Power'), 'entities.battery_power', powerIds('entities.battery_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.battery_charge_power || cfg.entities?.battery_discharge_power) ? '' : `
               <div class="row">
@@ -3951,7 +3951,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
                 <input type="checkbox" data-path="battery_invert" ${cfg.battery_invert ? 'checked' : ''}>
               </div>`}
               <hr class="group-divider">
-              <span class="group-label">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â or ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â separate sensors (always positive)</span>
+              <span class="group-label">â€” or â€” separate sensors (always positive)</span>
               ${this._entitySelectRow(this._t('editor.sensor_battery_charge', 'Battery Charge Power'), 'entities.battery_charge_power', powerIds('entities.battery_charge_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${this._entitySelectRow(this._t('editor.sensor_battery_discharge', 'Battery Discharge Power'), 'entities.battery_discharge_power', powerIds('entities.battery_discharge_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.battery_charge_power || cfg.entities?.battery_discharge_power) ? `<span class="note">battery_invert not needed when using separate charge/discharge sensors</span>` : ''}
@@ -3961,17 +3961,17 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â¥ Load -->
+          <!-- â‘¥ Load -->
           <div class="block">
-            <h4>ÃƒÂ°Ã…Â¸Ã‚Â  Home / Load</h4>
+            <h4>ðŸ  Home / Load</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_load', 'Load Power'), 'entities.load_power', powerIds('entities.load_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â¦ EV 1 -->
+          <!-- â‘¦ EV 1 -->
           <div class="block">
-            <h4>ÃƒÂ°Ã…Â¸Ã…Â¡Ã¢â‚¬â€ EV 1</h4>
+            <h4>ðŸš— EV 1</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_ev_power', 'EV Power'), 'entities.ev_power', powerIds('entities.ev_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${this._entitySelectRow(this._t('editor.sensor_ev_battery', 'EV Battery %'), 'entities.ev_battery', pctIds('entities.ev_battery'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
@@ -3984,9 +3984,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â§ EV 2 -->
+          <!-- â‘§ EV 2 -->
           <div class="block">
-            <h4>ÃƒÂ°Ã…Â¸Ã…Â¡Ã¢â‚¬â€ EV 2</h4>
+            <h4>ðŸš— EV 2</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_ev2_power', 'EV 2 Power'), 'entities.ev2_power', powerIds('entities.ev2_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${this._entitySelectRow(this._t('editor.sensor_ev2_battery', 'EV 2 Battery %'), 'entities.ev2_battery', pctIds('entities.ev2_battery'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
@@ -3999,9 +3999,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â¨ System -->
+          <!-- â‘¨ System -->
           <div class="block">
-            <h4>ÃƒÂ°Ã…Â¸Ã…â€™Ã‚Â¤ System</h4>
+            <h4>ðŸŒ¤ System</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_weather', 'Weather Entity'), 'entities.weather', weatherIds, this._t('editor.placeholder_weather', '-- select weather --'))}
               ${this._entitySelectRow(this._t('editor.sensor_sun', 'Sun Entity'), 'entities.sun', sunIds, this._t('editor.placeholder_sun', '-- select sun --'))}
@@ -4009,9 +4009,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             <div class="hint">${this._t('editor.hint_entities', 'Dropdowns filtered by unit / device class.')}</div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â© Thresholds -->
+          <!-- â‘© Thresholds -->
           <div class="block">
-            <h4>ÃƒÂ¢Ã…Â¡Ã¢â€žÂ¢ÃƒÂ¯Ã‚Â¸Ã‚Â Thresholds</h4>
+            <h4>âš™ï¸ Thresholds</h4>
             <div class="grid">
               <label>${this._t('editor.field_solar_threshold', 'Solar threshold (W)')}</label>
               <input type="number" data-path="thresholds.solar_min_w" value="${safeNum(cfg.thresholds?.solar_min_w, 50)}">
@@ -4024,9 +4024,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Âª Labels -->
+          <!-- â‘ª Labels -->
           <div class="block">
-            <h4>ÃƒÂ°Ã…Â¸Ã‚ÂÃ‚Â· Labels</h4>
+            <h4>ðŸ· Labels</h4>
             <div class="grid">
               <label>EV 1 label</label>
               <input data-path="ev_label" value="${this._escapeHtml(cfg.ev_label || '')}">
@@ -4039,7 +4039,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- ÃƒÂ¢Ã¢â‚¬ËœÃ‚Â« Background -->
+          <!-- â‘« Background -->
           <div class="block">
             <h4>${this._t('editor.section_dynamic_bg', 'Background')}</h4>
             <div class="grid">
