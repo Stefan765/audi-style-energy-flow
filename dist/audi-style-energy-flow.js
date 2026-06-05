@@ -680,7 +680,6 @@
     'ev-guide': Object.freeze({ x1: -22, y1: -100, x2: -22, y2: -30 }),
     'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
     'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-    'ev2-pct': Object.freeze({ x: 10, y: -2 }),
     'ev2-guide': Object.freeze({ x1: 416.77, y1: -30, x2: 416.77, y2: 0  })
   });
 
@@ -705,7 +704,6 @@
     'ev-guide': Object.freeze({ x1: 0, y1: -98, x2: 0, y2: 4 }),
     'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
     'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-    'ev2-pct': Object.freeze({ x: 0, y: -42 }),
     'ev2-guide': Object.freeze({ x1: 416.77, y1: -70, x2: 416.77, y2: -12  })
   });
 
@@ -730,7 +728,6 @@
     'ev-guide': Object.freeze({ x1: 0, y1: -98, x2: 0, y2: 4 }),
     'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
     'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-    'ev2-pct': Object.freeze({ x: -30, y: -42 }),
     'ev2-guide': Object.freeze({ x1: 416.77, y1: -75, x2: 416.77, y2: -17  })
   });
 
@@ -761,7 +758,6 @@
       'ev-guide': Object.freeze({ x1: -26, y1: -94, x2: -26, y2: -22 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 0, y: -44 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -72, x2: 416.77, y2: -18  })
     }),
     'scene_day_rain_charging.png': Object.freeze({
@@ -785,7 +781,6 @@
       'ev-guide': Object.freeze({ x1: -18, y1: -114, x2: -20, y2: -24 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 0, y: -48 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -78, x2: 416.77, y2: -24  })
     }),
     'scene_day_rain_dual_charging.png': Object.freeze({
@@ -809,7 +804,6 @@
       'ev-guide': Object.freeze({ x1: -18, y1: -114, x2: -20, y2: -24 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 0, y: -48 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -78, x2: 416.77, y2: -24  })
     }),
     'scene_night_clear_idle.png': Object.freeze({
@@ -833,7 +827,6 @@
       'ev-guide': Object.freeze({ x1: -18, y1: -72, x2: -18, y2: -6 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 4, y: -34 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -60, x2: 416.77, y2: -12  })
     }),
     'scene_night_clear_charging.png': Object.freeze({
@@ -857,7 +850,6 @@
       'ev-guide': Object.freeze({ x1: 8, y1: -78, x2: 10, y2: -30 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 8, y: -36 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -64, x2: 416.77, y2: -22  })
     }),
     'scene_night_clear_dual_charging.png': Object.freeze({
@@ -881,7 +873,6 @@
       'ev-guide': Object.freeze({ x1: 8, y1: -78, x2: 10, y2: -30 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 8, y: -36 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -64, x2: 416.77, y2: -22  })
     }),
     'scene_night_rain_idle.png': Object.freeze({
@@ -905,7 +896,6 @@
       'ev-guide': Object.freeze({ x1: -20, y1: -78, x2: -20, y2: -48 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 6, y: -36 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -60, x2: 416.77, y2: -24  })
     }),
     'scene_night_rain_charging.png': Object.freeze({
@@ -929,7 +919,6 @@
       'ev-guide': Object.freeze({ x1: -22, y1: -82, x2: -22, y2: -40 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 4, y: -38 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -68, x2: 416.77, y2: -28  })
     }),
     'scene_night_rain_dual_charging.png': Object.freeze({
@@ -953,7 +942,6 @@
       'ev-guide': Object.freeze({ x1: 13, y1: -68, x2: 13, y2: -26 }),
       'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
       'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-      'ev2-pct': Object.freeze({ x: 21, y: -28 }),
       'ev2-guide': Object.freeze({ x1: 416.77, y1: -68, x2: 416.77, y2: -28  })
     })
   });
@@ -1017,8 +1005,6 @@
     'ev-guide': Object.freeze({ id: 'flow-ev-guide', attrs: Object.freeze(['x1', 'y1', 'x2', 'y2']) }),
     'ev2-label': Object.freeze({ id: 'flow-ev2-label', attrs: Object.freeze(['x', 'y']) }),
     'ev2-power': Object.freeze({ id: 'flow-ev2-power', attrs: Object.freeze(['x', 'y']) }),
-    'ev2-arrow': Object.freeze({ id: 'flow-ev2-arrow', attrs: Object.freeze(['x', 'y']) }),
-    'ev2-pct': Object.freeze({ id: 'flow-ev2-pct', attrs: Object.freeze(['x', 'y']) }),
     'ev2-guide': Object.freeze({ id: 'flow-ev2-guide', attrs: Object.freeze(['x1', 'y1', 'x2', 'y2']) }),
     'roof-a-label': Object.freeze({ id: 'flow-roof-a-label', attrs: Object.freeze(['x', 'y']) }),
     'roof-a-power': Object.freeze({ id: 'flow-roof-a-power', attrs: Object.freeze(['x', 'y']) }),
