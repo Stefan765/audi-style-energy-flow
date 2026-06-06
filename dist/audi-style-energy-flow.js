@@ -470,13 +470,13 @@
   const SCENE_IMAGE_MAP = Object.freeze({
     day_clear_charging: 'scene_day_clear_charging.png',
     day_clear_idle: 'scene_day_clear_idle.png',
-    day_cloudy_charging: 'scene_day_clear_charging.png',
-    day_cloudy_idle: 'scene_day_clear_idle.png',
+    day_cloudy_charging: 'scene_day_cloudy_charging.png',
+    day_cloudy_idle: 'scene_day_cloudy_idle.png',
     day_rain_charging: 'scene_day_rain_charging.png',
     day_rain_idle: 'scene_day_rain_idle.png',
-    day_snow_charging: 'scene_day_clear_charging.png',
-    day_snow_idle: 'scene_day_clear_idle.png',
-    day_storm_charging: 'scene_day_clear_charging.png',
+    day_snow_charging: 'scene_day_snow_charging.png',
+    day_snow_idle: 'scene_day_snow_idle.png',
+    day_storm_charging: 'scene_day_storm_charging.png',
     day_storm_idle: 'scene_day_clear_idle.png',
     night_clear_charging: 'scene_night_clear_charging.png',
     night_clear_idle: 'scene_night_clear_idle.png',
@@ -492,15 +492,15 @@
 
   const DUAL_CHARGING_SCENE_IMAGE_MAP = Object.freeze({
     day_clear_dual_charging: 'scene_day_clear_dual_charging.png',
-    day_cloudy_dual_charging: 'scene_day_clear_dual_charging.png',
+    day_cloudy_dual_charging: 'scene_day_cloudy_dual_charging.png',
     day_rain_dual_charging: 'scene_day_rain_dual_charging.png',
-    day_snow_dual_charging: 'scene_day_clear_dual_charging.png',
-    day_storm_dual_charging: 'scene_day_clear_dual_charging.png',
+    day_snow_dual_charging: 'scene_day_snow_dual_charging.png',
+    day_storm_dual_charging: 'scene_day_storm_dual_charging.png',
     night_clear_dual_charging: 'scene_night_clear_dual_charging.png',
-    night_cloudy_dual_charging: 'scene_night_clear_dual_charging.png',
+    night_cloudy_dual_charging: 'scene_night_cloudy_dual_charging.png',
     night_rain_dual_charging: 'scene_night_rain_dual_charging.png',
-    night_snow_dual_charging: 'scene_night_clear_dual_charging.png',
-    night_storm_dual_charging: 'scene_night_clear_dual_charging.png'
+    night_snow_dual_charging: 'scene_night_snow_dual_charging.png',
+    night_storm_dual_charging: 'scene_night_storm_dual_charging.png'
   });
 
   const FLOW_PATH_KEYS = Object.freeze({
