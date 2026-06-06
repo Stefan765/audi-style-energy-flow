@@ -1732,11 +1732,7 @@
     }
 
     _initialPathProfile() {
-      const configProfile = profileFromConfigPaths(this._config.paths);
-      const sceneKey = sceneFileName(this._config.background);
-      const sceneProfile = this._sceneFlowPathMap()[sceneKey];
-      if (!sceneProfile) return configProfile;
-      return { ...configProfile, ...sceneProfile };
+      return profileFromConfigPaths(this._config.paths);
     }
 
     _applyPathProfile(profile, marker) {
@@ -1758,6 +1754,7 @@
 
     _applySceneFlowPaths(sceneHref) {
       const sceneKey = sceneFileName(sceneHref);
+      const configProfile = profileFromConfigPaths(this._config.paths);
       let sceneProfile = this._sceneFlowPathMap()[sceneKey];
     
       if (!sceneProfile) {
@@ -1770,7 +1767,7 @@
         }
       }
     
-      this._applyPathProfile(sceneProfile, sceneKey || '__auto__');
+      this._applyPathProfile({ ...configProfile, ...sceneProfile }, sceneKey || '__auto__');
     }
     
 
