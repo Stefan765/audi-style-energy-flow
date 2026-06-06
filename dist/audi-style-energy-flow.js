@@ -1629,7 +1629,7 @@
     }
 
     _sceneFlowPathMap() {
-      return deepMerge(SCENE_FLOW_PATH_MAP, this._config.scene_path_map || {});
+      return SCENE_FLOW_PATH_MAP;
     }
 
     _sceneFlowComponentMap() {
