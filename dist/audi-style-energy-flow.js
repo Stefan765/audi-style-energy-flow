@@ -2617,7 +2617,7 @@
       this._setText('#flow-battery-pct', batteryConfigured ? `${Math.round(batteryLevel)}%` : '');
       this._setText('#flow-ev-label', ev1.labelText || this._t('card.node.ev', 'EV'));
       this._setText('#flow-ev-power', this._formatKW(ev1.power || 0));
-      const ev1Arrow = ((ev1.power || 0) > 0 || ev1.switchOn) ? '▲'| : '';
+      const ev1Arrow = ((ev1.power || 0) > 0 || ev1.switchOn) ? '▲' : '';
       this._setText('#flow-ev-arrow', ev1Arrow);
       this._setText('#flow-ev-pct', ev1.batteryText || '--%');
       this._setText('#flow-ev2-label', ev2.labelText || 'EV 2');
