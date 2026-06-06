@@ -1754,20 +1754,11 @@
 
     _applySceneFlowPaths(sceneHref) {
       const sceneKey = sceneFileName(sceneHref);
-      const configProfile = profileFromConfigPaths(this._config.paths);
-      let sceneProfile = this._sceneFlowPathMap()[sceneKey];
+      const sceneProfile = this._sceneFlowPathMap()[sceneKey];
     
-      if (!sceneProfile) {
-        if (sceneKey.includes('dual_charging')) {
-          sceneProfile = DAY_CLEAR_DUAL_CHARGING_PATHS;
-        } else if (sceneKey.includes('charging')) {
-          sceneProfile = DAY_CLEAR_CHARGING_PATHS;
-        } else {
-          sceneProfile = DAY_CLEAR_IDLE_PATHS;
-        }
-      }
+      if (!sceneProfile) return false;
     
-      this._applyPathProfile({ ...configProfile, ...sceneProfile }, sceneKey || '__auto__');
+      return this._applyPathProfile(sceneProfile, sceneKey);
     }
     
 
