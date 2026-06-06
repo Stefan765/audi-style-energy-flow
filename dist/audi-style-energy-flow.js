@@ -1758,18 +1758,21 @@
 
     _applySceneFlowPaths(sceneHref) {
       const sceneKey = sceneFileName(sceneHref);
-      const sceneProfile = this._sceneFlowPathMap()[sceneKey];
-      if (sceneProfile) {
-        if (this._lastAppliedSceneFlowProfile !== sceneKey) {
-          this._applyPathProfile(sceneProfile, sceneKey);
+      let sceneProfile = this._sceneFlowPathMap()[sceneKey];
+    
+      if (!sceneProfile) {
+        if (sceneKey.includes('dual_charging')) {
+          sceneProfile = DAY_CLEAR_DUAL_CHARGING_PATHS;
+        } else if (sceneKey.includes('charging')) {
+          sceneProfile = DAY_CLEAR_CHARGING_PATHS;
+        } else {
+          sceneProfile = DAY_CLEAR_IDLE_PATHS;
         }
-        return;
       }
-      if (this._lastAppliedSceneFlowProfile !== '__config__') {
-        const fallbackProfile = profileFromConfigPaths(this._config.paths);
-        this._applyPathProfile(fallbackProfile, '__config__');
-      }
+    
+      this._applyPathProfile(sceneProfile, sceneKey || '__auto__');
     }
+    
 
     _applyComponentProfile(profile, marker) {
       if (!profile || typeof profile !== 'object') return false;
