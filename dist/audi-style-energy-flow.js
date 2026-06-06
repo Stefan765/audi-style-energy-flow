@@ -2622,7 +2622,7 @@
       this._setText('#flow-ev-pct', ev1.batteryText || '--%');
       this._setText('#flow-ev2-label', ev2.labelText || 'EV 2');
       this._setText('#flow-ev2-power', this._formatKW(ev2.power || 0));
-      const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
+const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       if (batteryStatusEl) {
         // Charge/discharge direction is shown via the separate green arrow.
         // the textual status word is intentionally suppressed (Tesla-style).
