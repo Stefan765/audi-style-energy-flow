@@ -536,7 +536,7 @@
     'line-battery-load': 'M 355 352 Q 383 347 398 343',
     'line-junction-home-load': 'M 401 343 Q 428 337 456 330',
     'line-wallbox-ev': 'M 203 328 Q 200 386 220 345',
-    'line-wallbox-ev2': 'M 150 100 L 200 100 L 300 100',
+    'line-wallbox-ev2': 'M 394 342 L 456 342 L 505 357',
   });
   
   const DAY_CLEAR_DUAL_CHARGING_PATHS = DAY_CLEAR_CHARGING_PATHS;
