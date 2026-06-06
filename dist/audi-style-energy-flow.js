@@ -516,27 +516,27 @@
   });
 
   const DAY_CLEAR_IDLE_PATHS = Object.freeze({
-    'line-solar-load': 'M 396 287 L 398 300 L 398 338',
-    'line-solar-grid': 'M 399 340 L 398 376 L 470 400',
-    'line-solar-battery': 'M 399 336 L 400 338 L 357 347',
-    'line-grid-load': 'M 434 402 Q 434 402 351 375 Q 352 340 351 341',
-    'line-grid-battery': 'M 436 402 L 352 376',
-    'line-battery-load': 'M 355 347 Q 382 342 401 337',
-    'line-junction-home-load': 'M 401 336 Q 431 329 458 323',
-    'line-wallbox-ev': 'M 204 322 Q 199 380 223 338',
-    'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
+    'line-solar-load': 'M 396 292 L 398 305 L 398 343',
+    'line-solar-grid': 'M 399 345 L 398 381 L 470 405',
+    'line-solar-battery': 'M 399 341 L 400 343 L 357 352',
+    'line-grid-load': 'M 434 407 Q 434 407 351 380 Q 352 345 351 346',
+    'line-grid-battery': 'M 436 407 L 352 381',
+    'line-battery-load': 'M 355 352 Q 382 347 401 342',
+    'line-junction-home-load': 'M 401 341 Q 431 334 458 328',
+    'line-wallbox-ev': 'M 204 327 Q 199 385 223 343',
+    'line-wallbox-ev2': 'M 394 342 L 456 342 L 505 357',
   });
   
   const DAY_CLEAR_CHARGING_PATHS = Object.freeze({
-    'line-solar-load': 'M 394 287 L 401 302 L 401 337',
-    'line-solar-grid': 'M 401 341 L 400 378 L 476 402',
-    'line-solar-battery': 'M 400 337 L 389 341 L 354 348',
-    'line-grid-load': 'M 490 407 Q 441 391 399 376 Q 400 358 400 337',
-    'line-grid-battery': 'M 352 340 L 312 348',
-    'line-battery-load': 'M 355 347 Q 383 342 398 338',
-    'line-junction-home-load': 'M 401 338 Q 428 332 456 325',
-    'line-wallbox-ev': 'M 203 323 Q 200 381 220 340',
-    'line-wallbox-ev2': 'M 394 337 L 456 337 L 505 352',
+    'line-solar-load': 'M 394 292 L 401 307 L 401 342',
+    'line-solar-grid': 'M 401 346 L 400 383 L 476 407',
+    'line-solar-battery': 'M 400 342 L 389 346 L 354 353',
+    'line-grid-load': 'M 490 412 Q 441 396 399 381 Q 400 363 400 342',
+    'line-grid-battery': 'M 352 345 L 312 353',
+    'line-battery-load': 'M 355 352 Q 383 347 398 343',
+    'line-junction-home-load': 'M 401 343 Q 428 337 456 330',
+    'line-wallbox-ev': 'M 203 328 Q 200 386 220 345',
+    'line-wallbox-ev2': 'M 394 342 L 456 342 L 505 357',
   });
   
   const DAY_CLEAR_DUAL_CHARGING_PATHS = DAY_CLEAR_CHARGING_PATHS;
