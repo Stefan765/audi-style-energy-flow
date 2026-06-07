@@ -2500,7 +2500,7 @@
         evNodeGroup.classList.toggle('ev-hidden', !ev1.configured || (evHideIdle && !(ev1.power > 0 || ev1.switchOn || ev1.present)));
       }
       if (ev2NodeGroup) {
-        ev2NodeGroup.classList.toggle('ev-hidden', !ev2.configured || (evHideIdle && !(ev2.power > 0 || ev2.switchOn || ev2.present)));
+        ev2NodeGroup.classList.toggle('ev-hidden', !ev2.configured);
       }
       if (batteryNodeGroup) {
         batteryNodeGroup.classList.toggle('battery-hidden', !batteryConfigured);
