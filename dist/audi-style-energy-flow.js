@@ -524,7 +524,7 @@
     'line-battery-load': 'M 310 348 Q 353 339 352 338',
     'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
     'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
-    'line-wallbox-ev2': 'M 434 402 Q 434 402 351 375 Q 352 340 351 341',
+    'line-wallbox-ev2': 'M 444 402 Q 444 402 361 375 Q 362 340 361 341',
   });
   
   const DAY_CLEAR_CHARGING_PATHS = Object.freeze({
@@ -536,7 +536,7 @@
     'line-battery-load': 'M 310 348 Q 353 339 352 338',
     'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
     'line-wallbox-ev': 'M 164 322 Q 160 368 182 344',
-    'line-wallbox-ev2': 'M 434 402 Q 434 402 351 375 Q 352 340 351 341',
+    'line-wallbox-ev2': 'M 444 402 Q 444 402 361 375 Q 362 340 361 341',
   });
   
   const DAY_CLEAR_DUAL_CHARGING_PATHS = DAY_CLEAR_CHARGING_PATHS;
