@@ -1725,7 +1725,7 @@
     _setBackground(url) {
       const img = this.shadowRoot.querySelector('#flow-scene-image');
       if (!img || !url) return;
-      img.setAttribute('y', '3');
+      img.setAttribute('y', '6');
       if (img.getAttribute('href') !== url) {
         img.setAttribute('href', url);
       }
