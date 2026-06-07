@@ -1068,7 +1068,7 @@
       line_battery_load: 'M 310 348 Q 353 339 352 338',
       line_junction_home_load: 'M 354 338 Q 386 330 408 324',
       line_wallbox_ev: 'M 164 322 Q 160 368 182 344',
-      line_wallbox_ev2: 'M 394 342 L 456 342 L 505 357',
+      line_wallbox_ev2: 'M 434 402 Q 434 402 351 375 Q 352 340 351 341',
       line_solar_grid: 'M 350 292 L 352 374 L 434 402',
       line_solar_battery: 'M 350 292 L 352 338 L 312 348',
       line_grid_battery: 'M 352 340 L 312 348'
