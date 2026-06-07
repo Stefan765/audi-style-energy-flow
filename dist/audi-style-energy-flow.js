@@ -550,7 +550,7 @@
     'scene_day_cloudy_charging.png': DAY_CLEAR_CHARGING_PATHS,
     'scene_day_cloudy_dual_charging.png': DAY_CLEAR_DUAL_CHARGING_PATHS,
   
-    'scene_day_rain_idle.png': DAY_CLEAR_IDLE_PATHS,i
+    'scene_day_rain_idle.png': DAY_CLEAR_IDLE_PATHS,
     'scene_day_rain_charging.png': DAY_CLEAR_CHARGING_PATHS,
     'scene_day_rain_dual_charging.png': DAY_CLEAR_DUAL_CHARGING_PATHS,
   
