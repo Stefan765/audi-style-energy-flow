@@ -383,7 +383,7 @@
       card: {
         default_title: 'Energiefluss',
         node: {
-          solar: 'Solar',
+          solar: 'Pv',
           grid: 'Netz',
           home: 'Haus',
           battery: 'Batterie',
