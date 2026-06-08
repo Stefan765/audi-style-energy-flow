@@ -1612,7 +1612,7 @@
         if (this._setSvgAttrs(target, attrs)) applied = true;
       });
       if (this._alignCompactValueRows()) applied = true;
-      if (this._alignLabelPowerColumns()) applied = true;
+     // if (this._alignLabelPowerColumns()) applied = true;
       if (this._fitTextBlocksToViewBox()) applied = true;
       if (this._alignCompactValueRows()) applied = true;
       if (this._alignGuideTextClearance()) applied = true;
