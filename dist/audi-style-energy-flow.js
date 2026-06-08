@@ -732,7 +732,7 @@
     'scene_night_clear_dual_charging.png': { x: 0, y: -6 },
   
     // Night Cloudy
-    'scene_night_cloudy_idle.png': { x: 0, y: -6 },
+    'scene_night_cloudy_idle.png': { x: 0, y: 0 },
     'scene_night_cloudy_charging.png': { x: 0, y: 0 },
     'scene_night_cloudy_dual_charging.png': { x: 0, y: 0 },
   
