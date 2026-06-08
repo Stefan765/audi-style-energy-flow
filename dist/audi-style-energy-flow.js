@@ -737,9 +737,9 @@
     'scene_night_cloudy_dual_charging.png': { x: 0, y: 0 },
   
     // Night Rain
-    'scene_night_rain_idle.png': { x: 0, y: -6 },
-    'scene_night_rain_charging.png': { x: 0, y: -6 },
-    'scene_night_rain_dual_charging.png': { x: 0, y: -6 },
+    'scene_night_rain_idle.png': { x: 0, y: 0 },
+    'scene_night_rain_charging.png': { x: 0, y: 0 },
+    'scene_night_rain_dual_charging.png': { x: 0, y: 0 },
   
     // Night Snow
     'scene_night_snow_idle.png': { x: 0, y: -6 },
@@ -747,9 +747,9 @@
     'scene_night_snow_dual_charging.png': { x: 0, y: -6 },
   
     // Night Storm
-    'scene_night_storm_idle.png': { x: 0, y: -6 },
-    'scene_night_storm_charging.png': { x: 0, y: -6 },
-    'scene_night_storm_dual_charging.png': { x: 0, y: -6 },
+    'scene_night_storm_idle.png': { x: 0, y: 0 },
+    'scene_night_storm_charging.png': { x: 0, y: 0 },
+    'scene_night_storm_dual_charging.png': { x: 0, y: 0 },
   
     // Legacy
     'image.png': { x: 0, y: -6 },
