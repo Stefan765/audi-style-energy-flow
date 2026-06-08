@@ -1461,7 +1461,7 @@
     }
 
     _sceneFlowComponentMap() {
-      return deepMerge(SCENE_FLOW_COMPONENT_MAP, this._config.scene_component_map || {});
+      return SCENE_FLOW_COMPONENT_MAP;
     }
 
     _resolveBackground(evCharging, hasSecondaryEv = false) {
