@@ -699,6 +699,62 @@
     'image2.png': DAY_CLEAR_IDLE_COMPONENTS,
     'image.png': DAY_CLEAR_CHARGING_COMPONENTS
   });
+
+  const SCENE_IMAGE_POSITION_MAP = Object.freeze({
+    // Day Clear
+    'scene_day_clear_idle.png': { x: 0, y: -6 },
+    'scene_day_clear_charging.png': { x: 0, y: -6 },
+    'scene_day_clear_dual_charging.png': { x: 0, y: -6 },
+  
+    // Day Cloudy
+    'scene_day_cloudy_idle.png': { x: 0, y: -6 },
+    'scene_day_cloudy_charging.png': { x: 0, y: -6 },
+    'scene_day_cloudy_dual_charging.png': { x: 0, y: -6 },
+  
+    // Day Rain
+    'scene_day_rain_idle.png': { x: 0, y: -6 },
+    'scene_day_rain_charging.png': { x: 0, y: -6 },
+    'scene_day_rain_dual_charging.png': { x: 0, y: -6 },
+  
+    // Day Snow
+    'scene_day_snow_idle.png': { x: 0, y: -6 },
+    'scene_day_snow_charging.png': { x: 0, y: -6 },
+    'scene_day_snow_dual_charging.png': { x: 0, y: -6 },
+  
+    // Day Storm
+    'scene_day_storm_idle.png': { x: 0, y: -6 },
+    'scene_day_storm_charging.png': { x: 0, y: -6 },
+    'scene_day_storm_dual_charging.png': { x: 0, y: -6 },
+  
+    // Night Clear
+    'scene_night_clear_idle.png': { x: 0, y: -6 },
+    'scene_night_clear_charging.png': { x: 0, y: -6 },
+    'scene_night_clear_dual_charging.png': { x: 0, y: -6 },
+  
+    // Night Cloudy
+    'scene_night_cloudy_idle.png': { x: 0, y: -6 },
+    'scene_night_cloudy_charging.png': { x: 0, y: -6 },
+    'scene_night_cloudy_dual_charging.png': { x: 0, y: -6 },
+  
+    // Night Rain
+    'scene_night_rain_idle.png': { x: 0, y: -6 },
+    'scene_night_rain_charging.png': { x: 0, y: -6 },
+    'scene_night_rain_dual_charging.png': { x: 0, y: -6 },
+  
+    // Night Snow
+    'scene_night_snow_idle.png': { x: 0, y: -6 },
+    'scene_night_snow_charging.png': { x: 0, y: -6 },
+    'scene_night_snow_dual_charging.png': { x: 0, y: -6 },
+  
+    // Night Storm
+    'scene_night_storm_idle.png': { x: 0, y: -6 },
+    'scene_night_storm_charging.png': { x: 0, y: -6 },
+    'scene_night_storm_dual_charging.png': { x: 0, y: -6 },
+  
+    // Legacy
+    'image.png': { x: 0, y: -6 },
+    'image2.png': { x: 0, y: -6 }
+  });
  
   
 
@@ -1554,7 +1610,11 @@
       const img = this.shadowRoot.querySelector('#flow-scene-image');
       if (!img || !url) return;
     
-      img.setAttribute('y', '-6');
+      const sceneKey = sceneFileName(url);
+      const pos = SCENE_IMAGE_POSITION_MAP[sceneKey] || { x: 0, y: 0 };
+    
+      img.setAttribute('x', pos.x);
+      img.setAttribute('y', pos.y);
     
       if (img.getAttribute('href') !== url) {
         img.setAttribute('href', url);
@@ -1563,7 +1623,6 @@
       this._applySceneFlowPaths(url);
       this._applySceneFlowComponents(url);
     }
-
     _initialPathProfile() {
       return profileFromConfigPaths(this._config.paths);
     }
