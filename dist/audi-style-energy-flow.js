@@ -742,9 +742,9 @@
     'scene_night_rain_dual_charging.png': { x: 0, y: 0 },
   
     // Night Snow
-    'scene_night_snow_idle.png': { x: 0, y: 2 },
-    'scene_night_snow_charging.png': { x: 0, y: 2 },
-    'scene_night_snow_dual_charging.png': { x: 0, y: 2 },
+    'scene_night_snow_idle.png': { x: 0, y: 6 },
+    'scene_night_snow_charging.png': { x: 0, y: 6 },
+    'scene_night_snow_dual_charging.png': { x: 0, y: 6 },
   
     // Night Storm
     'scene_night_storm_idle.png': { x: 0, y: 0 },
