@@ -733,8 +733,8 @@
   
     // Night Cloudy
     'scene_night_cloudy_idle.png': { x: 0, y: -6 },
-    'scene_night_cloudy_charging.png': { x: 0, y: -6 },
-    'scene_night_cloudy_dual_charging.png': { x: 0, y: -6 },
+    'scene_night_cloudy_charging.png': { x: 0, y: 0 },
+    'scene_night_cloudy_dual_charging.png': { x: 0, y: 0 },
   
     // Night Rain
     'scene_night_rain_idle.png': { x: 0, y: -6 },
