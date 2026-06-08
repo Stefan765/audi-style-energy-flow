@@ -1553,10 +1553,15 @@
     _setBackground(url) {
       const img = this.shadowRoot.querySelector('#flow-scene-image');
       if (!img || !url) return;
+    
       img.setAttribute('y', '-6');
+    
       if (img.getAttribute('href') !== url) {
         img.setAttribute('href', url);
       }
+    
+      this._applySceneFlowPaths(url);
+      this._applySceneFlowComponents(url);
     }
 
     _initialPathProfile() {
@@ -1823,13 +1828,21 @@
 
     _applySceneFlowComponents(sceneHref) {
       const sceneKey = sceneFileName(sceneHref);
-      const map = this._sceneFlowComponentMap();
-      const sceneProfile = map[sceneKey] || map['scene_day_clear_idle.png'];
-      const marker = map[sceneKey] ? sceneKey : 'scene_day_clear_idle.png';
+      const map = SCENE_FLOW_COMPONENT_MAP;
     
-      if (!sceneProfile) return;
+      let sceneProfile = map[sceneKey];
     
-      this._applyComponentProfile(sceneProfile, marker);
+      if (!sceneProfile) {
+        if (sceneKey.includes('dual_charging')) {
+          sceneProfile = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
+        } else if (sceneKey.includes('charging')) {
+          sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
+        } else {
+          sceneProfile = DAY_CLEAR_IDLE_COMPONENTS;
+        }
+      }
+    
+      this._applyComponentProfile(sceneProfile, sceneKey || '__auto__');
     }
     
 
