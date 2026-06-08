@@ -1611,10 +1611,10 @@
       if (!img || !url) return;
     
       const sceneKey = sceneFileName(url);
-      const pos = SCENE_IMAGE_POSITION_MAP[sceneKey] || { x: 0, y: 0 };
+      const pos = SCENE_IMAGE_POSITION_MAP[sceneKey] || { x: 0, y: -6 };
     
-      img.setAttribute('x', pos.x);
-      img.setAttribute('y', pos.y);
+      img.setAttribute('x', String(pos.x));
+      img.setAttribute('y', String(pos.y));
     
       if (img.getAttribute('href') !== url) {
         img.setAttribute('href', url);
