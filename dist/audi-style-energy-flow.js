@@ -1826,11 +1826,12 @@
       const map = this._sceneFlowComponentMap();
       const sceneProfile = map[sceneKey] || map['scene_day_clear_idle.png'];
       const marker = map[sceneKey] ? sceneKey : 'scene_day_clear_idle.png';
+    
       if (!sceneProfile) return;
-      if (this._lastAppliedSceneFlowComponentProfile !== marker) {
-        this._applyComponentProfile(sceneProfile, marker);
-      }
+    
+      this._applyComponentProfile(sceneProfile, marker);
     }
+    
 
     _renderStatic() {
       const cfg = this._config;
