@@ -722,9 +722,9 @@
     'scene_day_snow_dual_charging.png': { x: 0, y: -2 },
   
     // Day Storm
-    'scene_day_storm_idle.png': { x: 0, y: -2 },
-    'scene_day_storm_charging.png': { x: 0, y: -2 },
-    'scene_day_storm_dual_charging.png': { x: 0, y: -2 },
+    'scene_day_storm_idle.png': { x: 0, y: -6 },
+    'scene_day_storm_charging.png': { x: 0, y: -6 },
+    'scene_day_storm_dual_charging.png': { x: 0, y: -6 },
   
     // Night Clear
     'scene_night_clear_idle.png': { x: 0, y: -6 },
