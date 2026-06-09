@@ -614,7 +614,7 @@
   const DAY_CLEAR_CHARGING_COMPONENTS = Object.freeze({
     'solar-label': Object.freeze({ x: 4, y: -76 }),
     'solar-power': Object.freeze({ x: 18, y: -52 }),
-    'solar-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: 20 }),
+    'solar-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: 10 }),
     'grid-label': Object.freeze({ x: 46, y: 99 }),
     'grid-power': Object.freeze({ x: 46, y: 121 }),
     'grid-guide': Object.freeze({ x1: 46, y1: 110, x2: 46, y2: 110 }),
@@ -638,7 +638,7 @@
   const DAY_CLEAR_DUAL_CHARGING_COMPONENTS = Object.freeze({
     'solar-label': Object.freeze({ x: 9, y: -77 }),
     'solar-power': Object.freeze({ x: 10, y: -59 }),
-    'solar-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: 20 }),
+    'solar-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: 10 }),
     'grid-label': Object.freeze({ x: 46, y: 99 }),
     'grid-power': Object.freeze({ x: 46, y: 121 }),
     'grid-guide': Object.freeze({ x1: 46, y1: 110, x2: 46, y2: 110 }),
