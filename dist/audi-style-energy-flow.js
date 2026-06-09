@@ -586,53 +586,7 @@
     'image.png': DAY_CLEAR_CHARGING_PATHS
   });
 
-  const DAY_CLEAR_IDLE_COMPONENTS = Object.freeze({
-    'solar-label': Object.freeze({ x: 4, y: -76 }),
-    'solar-power': Object.freeze({ x: 18, y: -52 }),
-    'solar-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: 10 }),
-    'grid-label': Object.freeze({ x: 46, y: 99 }),
-    'grid-power': Object.freeze({ x: 46, y: 121 }),
-    'grid-guide': Object.freeze({ x1: 46, y1: 110, x2: 46, y2: 110 }),
-    'load-label': Object.freeze({ x: -32, y: -20 }),
-    'load-power': Object.freeze({ x: -12, y: 2 }),
-    'load-guide': Object.freeze({ x1: -32, y1: 2, x2: -32, y2: 66 }),
-    'battery-label': Object.freeze({ x: -46, y: 100 }),
-    'battery-power': Object.freeze({ x: -34, y: 122 }),
-    'battery-pct': Object.freeze({ x: -14, y: 84 }),
-    'battery-status': Object.freeze({ x: 12, y: 100 }),
-    'battery-guide': Object.freeze({ x1: 0, y1: 0, x2: 0, y2: 0 }),
-    'ev-label': Object.freeze({ x: 2, y: -118 }),
-    'ev-power': Object.freeze({ x: 20, y: -100 }),
-    'ev-pct': Object.freeze({ x: 2, y: -14 }),
-    'ev-guide': Object.freeze({ x1: 0, y1: -98, x2: 0, y2: 4 }),
-    'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
-    'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-    'ev2-guide': Object.freeze({ x1: 416.77, y1: -70, x2: 416.77, y2: -12  })
-  });
 
-  const DAY_CLEAR_CHARGING_COMPONENTS = Object.freeze({
-    'solar-label': Object.freeze({ x: 4, y: -76 }),
-    'solar-power': Object.freeze({ x: 18, y: -52 }),
-    'solar-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: 10 }),
-    'grid-label': Object.freeze({ x: 46, y: 99 }),
-    'grid-power': Object.freeze({ x: 46, y: 121 }),
-    'grid-guide': Object.freeze({ x1: 46, y1: 110, x2: 46, y2: 110 }),
-    'load-label': Object.freeze({ x: -32, y: -20 }),
-    'load-power': Object.freeze({ x: -12, y: 2 }),
-    'load-guide': Object.freeze({ x1: -32, y1: 2, x2: -32, y2: 66 }),
-    'battery-label': Object.freeze({ x: -46, y: 100 }),
-    'battery-power': Object.freeze({ x: -34, y: 122 }),
-    'battery-pct': Object.freeze({ x: -14, y: 84 }),
-    'battery-status': Object.freeze({ x: 12, y: 100 }),
-    'battery-guide': Object.freeze({ x1: 0, y1: 0, x2: 0, y2: 0 }),
-    'ev-label': Object.freeze({ x: 2, y: -118 }),
-    'ev-power': Object.freeze({ x: 20, y: -100 }),
-    'ev-pct': Object.freeze({ x: 2, y: -14 }),
-    'ev-guide': Object.freeze({ x1: 0, y1: -98, x2: 0, y2: 4 }),
-    'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
-    'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
-    'ev2-guide': Object.freeze({ x1: 416.77, y1: -70, x2: 416.77, y2: -12  })
-  });
 
   const DAY_CLEAR_DUAL_CHARGING_COMPONENTS = Object.freeze({
     'solar-label': Object.freeze({ x: 9, y: -77 }),
