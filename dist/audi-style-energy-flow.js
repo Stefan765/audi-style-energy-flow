@@ -1843,23 +1843,21 @@
 
     _applySceneFlowComponents(sceneHref) {
       const sceneKey = sceneFileName(sceneHref);
-      const map = SCENE_FLOW_COMPONENT_MAP;
     
-      let sceneProfile = map[sceneKey];
+      let sceneProfile;
     
-      if (!sceneProfile) {
-        if (sceneKey.includes('dual_charging')) {
-          sceneProfile = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
-        } else if (sceneKey.includes('charging')) {
-          sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
-        } else {
-          sceneProfile = DAY_CLEAR_IDLE_COMPONENTS;
-        }
+      if (this._ev2Configured) {
+        sceneProfile = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
+      } else if (sceneKey.includes('dual_charging')) {
+        sceneProfile = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
+      } else if (sceneKey.includes('charging')) {
+        sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
+      } else {
+        sceneProfile = DAY_CLEAR_IDLE_COMPONENTS;
       }
     
       this._applyComponentProfile(sceneProfile, sceneKey || '__auto__');
     }
-    
 
     _renderStatic() {
       const cfg = this._config;
