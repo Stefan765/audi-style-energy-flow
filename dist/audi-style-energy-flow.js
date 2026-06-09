@@ -611,6 +611,7 @@
     'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
     'ev2-guide': Object.freeze({ x1: 416.77, y1: -75, x2: 416.77, y2: -17  })
   });
+  
   const DAY_CLEAR_IDLE_COMPONENTS = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
   const DAY_CLEAR_CHARGING_COMPONENTS = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
 
