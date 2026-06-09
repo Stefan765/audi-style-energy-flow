@@ -712,9 +712,9 @@
     'scene_day_cloudy_dual_charging.png': { x: 0, y: -6 },
   
     // Day Rain
-    'scene_day_rain_idle.png': { x: 0, y: -3 },
-    'scene_day_rain_charging.png': { x: 0, y: -3 },
-    'scene_day_rain_dual_charging.png': { x: 0, y: -3 },
+    'scene_day_rain_idle.png': { x: 0, y: 0 },
+    'scene_day_rain_charging.png': { x: 0, y: 0 },
+    'scene_day_rain_dual_charging.png': { x: 0, y:0 },
   
     // Day Snow
     'scene_day_snow_idle.png': { x: 0, y: -6 },
