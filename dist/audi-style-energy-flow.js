@@ -519,7 +519,7 @@
     'line-solar-load': 'M 351 292 L 352 338 L 352 338',
     'line-solar-grid': 'M 350 292 L 352 374 L 475 416',
     'line-solar-battery': 'M 350 292 L 352 338 L 312 348',
-    'line-grid-load': 'M 434 402 Q 434 402 351 375 Q 352 340 351 341',
+    'line-grid-load': 'M 475 416 L 434 402 Q 434 402 351 375 Q 352 340 351 341',
     'line-grid-battery': 'M 352 340 L 312 348',
     'line-battery-load': 'M 310 348 Q 353 339 352 338',
     'line-junction-home-load': 'M 354 338 Q 386 330 408 324',
