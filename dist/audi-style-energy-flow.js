@@ -616,11 +616,11 @@
   const DAY_CLEAR_DUAL_CHARGING_COMPONENTS = DAY_CLEAR_CHARGING_COMPONENTS;
 
   const SCENE_FLOW_COMPONENT_MAP = Object.freeze({
-    'scene_day_clear_idle.png': DAY_CLEAR_IDLE_COMPONENTS,
-    'scene_day_cloudy_idle.png': DAY_CLEAR_IDLE_COMPONENTS,
-    'scene_day_rain_idle.png': DAY_CLEAR_IDLE_COMPONENTS,
-    'scene_day_snow_idle.png': DAY_CLEAR_IDLE_COMPONENTS,
-    'scene_day_storm_idle.png': DAY_CLEAR_IDLE_COMPONENTS,
+    'scene_day_clear_idle.png': DAY_CLEAR_CHARGING_COMPONENTS,
+    'scene_day_cloudy_idle.png': DAY_CLEAR_CHARGING_COMPONENTS,
+    'scene_day_rain_idle.png': DAY_CLEAR_CHARGING_COMPONENTS,
+    'scene_day_snow_idle.png': DAY_CLEAR_CHARGING_COMPONENTS,
+    'scene_day_storm_idle.png': DAY_CLEAR_CHARGING_COMPONENTS,
   
     'scene_night_clear_idle.png': DAY_CLEAR_IDLE_COMPONENTS,
     'scene_night_cloudy_idle.png': DAY_CLEAR_IDLE_COMPONENTS,
