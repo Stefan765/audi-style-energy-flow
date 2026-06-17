@@ -588,7 +588,7 @@
 
 
 
-  const DAY_CLEAR_CHARGING_COMPONENTS = Object.freeze({
+  const DAY_CLEAR_DUAL_CHARGING_COMPONENTS = Object.freeze({
     'solar-label': Object.freeze({ x: 9, y: -77 }),
     'solar-power': Object.freeze({ x: 10, y: -59 }),
     'solar-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: 10 }),
@@ -612,8 +612,8 @@
     'ev2-guide': Object.freeze({ x1: 416.77, y1: -75, x2: 416.77, y2: -17  })
   });
   
-  const DAY_CLEAR_IDLE_COMPONENTS = DAY_CLEAR_CHARGING_COMPONENTS;
-  const DAY_CLEAR_DUAL_CHARGING_COMPONENTS = DAY_CLEAR_CHARGING_COMPONENTS;
+  const DAY_CLEAR_IDLE_COMPONENTS = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
+  const DAY_CLEAR_CHARGING_COMPONENTS = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
 
   const SCENE_FLOW_COMPONENT_MAP = Object.freeze({
     'scene_day_clear_idle.png': DAY_CLEAR_CHARGING_COMPONENTS,
