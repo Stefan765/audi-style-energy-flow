@@ -2454,9 +2454,14 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       const gridExport = Math.max(0, -gridPower);
       const batteryCharge = Math.max(0, batteryPower);
       const batteryDischarge = Math.max(0, -batteryPower);
-      const evDraw = evSceneActive ? Math.max(0, evPower) : 0;
       const ev1Draw = Math.max(0, ev1.power || 0);
-      const ev2Draw = Math.max(0, ev2.power || 0);
+      const heatPumpDraw = Math.max(0, ev2.power || 0);
+      
+      // EV1 ist von der Charging-Szene abhängig.
+      // Die Wärmepumpe ist ein normaler Dauerverbraucher und immer aktiv,
+      // sobald ihr Leistungssensor einen Wert > 0 liefert.
+      const evDraw = ev1Draw + heatPumpDraw;
+
 
       const solarToLoad = Math.min(solarPos, loadPos);
       const remainingLoad = Math.max(0, loadPos - solarToLoad);
