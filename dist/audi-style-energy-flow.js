@@ -2332,7 +2332,16 @@
       const batteryMin = this._flowThreshold('battery_min_w', FLOW_MIN_W);
       const homeMin = Math.min(solarMin, gridMin, batteryMin);
 
-      const evCharging = this._isEvCharging(evData);
+      const ev1Data = evData.vehicles.find((v) => v.key === 'ev1') || null;
+
+      const evCharging = ev1Data
+        ? (
+            ev1Data.hasPowerEntity
+              ? ev1Data.power > Math.max(0, safeNum(cfg.ev_min_w, 150))
+              : ev1Data.switchOn
+          )
+        : false;
+
       const ev1Vehicle = evData.vehicles.find((v) => v.key === 'ev1') || null;
       const heatPumpVehicle = evData.vehicles.find((v) => v.key === 'ev2') || null;
       
