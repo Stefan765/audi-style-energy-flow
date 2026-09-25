@@ -2363,8 +2363,26 @@
       const batteryNodeGroup = this.shadowRoot.querySelector('#battery-node-group');
       const roofAGroup = this.shadowRoot.querySelector('#roof-array-a-group');
       const roofBGroup = this.shadowRoot.querySelector('#roof-array-b-group');
-      const ev1 = primaryVisibleVehicle || { power: 0, batteryText: '--%', labelText: this._t('card.node.ev', 'EV'), switchOn: false, configured: false, present: false };
-      const ev2 = secondaryVisibleVehicle || { power: 0, batteryText: '--%', labelText: 'EV 2', switchOn: false, configured: false, present: false };
+      const ev1 = primaryVisibleVehicle || {
+        key: 'ev1',
+        power: 0,
+        batteryText: '--%',
+        labelText: this._t('card.node.ev', 'EV'),
+        switchOn: false,
+        configured: false,
+        present: false
+      };
+      
+      const ev2 = secondaryVisibleVehicle || {
+        key: 'ev2',
+        power: 0,
+        batteryText: '--%',
+        labelText: cfg.ev2_label || 'Wärmepumpe',
+        switchOn: false,
+        configured: false,
+        present: false
+      };
+
       if (evNodeGroup) {
         evNodeGroup.classList.toggle('ev-hidden', !ev1.configured || (evHideIdle && !(ev1.power > 0 || ev1.switchOn || ev1.present)));
       }
