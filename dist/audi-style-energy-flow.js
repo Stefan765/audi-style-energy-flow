@@ -2397,6 +2397,7 @@
       if (batteryNodeGroup) {
         batteryNodeGroup.classList.toggle('battery-hidden', !batteryConfigured);
       }
+
       if (roofAGroup) {
         roofAGroup.classList.toggle('roof-hidden', !(roofAPower > 0 || roofAVoltage > 0 || roofACurrent > 0));
       }
