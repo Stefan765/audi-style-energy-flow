@@ -1846,18 +1846,18 @@
     
       let sceneProfile;
     
-      if (this._ev2Configured) {
-        sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
-      } else if (sceneKey.includes('dual_charging')) {
-        sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
-      } else if (sceneKey.includes('charging')) {
+      if (sceneKey.includes('charging')) {
         sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
       } else {
         sceneProfile = DAY_CLEAR_IDLE_COMPONENTS;
       }
     
-      this._applyComponentProfile(sceneProfile, sceneKey || '__auto__');
+      this._applyComponentProfile(
+        sceneProfile,
+        sceneKey || '__auto__'
+      );
     }
+
 
     _renderStatic() {
       const cfg = this._config;
