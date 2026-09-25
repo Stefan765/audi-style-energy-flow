@@ -2384,13 +2384,16 @@
       };
 
       if (evNodeGroup) {
-        evNodeGroup.classList.toggle('ev-hidden', !ev1.configured || (evHideIdle && !(ev1.power > 0 || ev1.switchOn || ev1.present)));
+        evNodeGroup.classList.toggle(
+          'ev-hidden',
+          !ev1.configured || (evHideIdle && !(ev1.power > 0 || ev1.switchOn || ev1.present))
+        );
       }
+      
       if (ev2NodeGroup) {
         ev2NodeGroup.classList.toggle('ev-hidden', !ev2.configured);
       }
-
-      }
+      
       if (batteryNodeGroup) {
         batteryNodeGroup.classList.toggle('battery-hidden', !batteryConfigured);
       }
