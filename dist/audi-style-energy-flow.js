@@ -2355,9 +2355,8 @@
       const evSceneActive = evData.hasPresenceEntities
         ? (evCharging || evData.presenceVehicles.length > 0)
         : evCharging;
-      const useDualScene = evData.hasPresenceEntities
-        ? (sceneVehicles.length > 1)
-        : evData.hasConfiguredSecondaryEv;
+      const useDualScene = false;
+
       const evHideIdle = !!cfg.ev_hide_when_idle;
       const evNodeGroup = this.shadowRoot.querySelector('#ev-node-group');
       const ev2NodeGroup = this.shadowRoot.querySelector('#ev2-node-group');
