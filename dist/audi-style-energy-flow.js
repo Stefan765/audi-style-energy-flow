@@ -3759,20 +3759,28 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- â‘§ EV 2 -->
+          <!-- Heat pump -->
           <div class="block">
-            <h4>Ã°Å¸Å¡â€” EV 2</h4>
+            <h4>🔥 Wärmepumpe</h4>
             <div class="grid">
-              ${this._entitySelectRow(this._t('editor.sensor_ev2_power', 'EV 2 Power'), 'entities.ev2_power', powerIds('entities.ev2_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
-              ${this._entitySelectRow(this._t('editor.sensor_ev2_battery', 'EV 2 Battery %'), 'entities.ev2_battery', pctIds('entities.ev2_battery'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
-              ${this._entitySelectRow(this._t('editor.sensor_ev2_switch', 'EV 2 Charge Switch'), 'entities.ev2_charge_switch', switchIds, this._t('editor.placeholder_switch', '-- select switch --'))}
-              ${this._entitySelectRow('EV 2 Presence', 'entities.ev2_presence', presenceIds, '-- select presence entity --')}
+              ${this._entitySelectRow(
+                'Wärmepumpe Power',
+                'entities.ev2_power',
+                powerIds('entities.ev2_power'),
+                this._t('editor.placeholder_sensor', '-- select sensor --')
+              )}
             </div>
+          
             <div class="row">
-              <label>${this._t('editor.field_ev2_in_load', 'EV 2 power already included in home load')}</label>
-              <input type="checkbox" data-path="ev2_in_load" ${cfg.ev2_in_load ? 'checked' : ''}>
+              <label>Wärmepumpe bereits im Hausverbrauch enthalten</label>
+              <input
+                type="checkbox"
+                data-path="ev2_in_load"
+                ${cfg.ev2_in_load ? 'checked' : ''}
+              >
             </div>
           </div>
+
 
           <!-- â‘¨ System -->
           <div class="block">
