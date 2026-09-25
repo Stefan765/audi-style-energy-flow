@@ -2429,9 +2429,7 @@
       const ev1Arrow = ((ev1.power || 0) > 0 || ev1.switchOn) ? '▲' : '';
       this._setText('#flow-ev-arrow', ev1Arrow);
       this._setText('#flow-ev-pct', ev1.batteryText || '--%');
-      this._setText('#flow-ev2-label', ev2.labelText || cfg.ev2_label || 'Wärmepumpe'
-      );
-
+      this._setText('#flow-ev2-label', ev2.labelText || cfg.ev2_label || 'Wärmepumpe');
       this._setText('#flow-ev2-power', this._formatKW(ev2.power || 0));
 const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       if (batteryStatusEl) {
