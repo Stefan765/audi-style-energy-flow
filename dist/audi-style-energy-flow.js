@@ -2389,6 +2389,8 @@
       if (ev2NodeGroup) {
         ev2NodeGroup.classList.toggle('ev-hidden', !ev2.configured);
       }
+
+      }
       if (batteryNodeGroup) {
         batteryNodeGroup.classList.toggle('battery-hidden', !batteryConfigured);
       }
