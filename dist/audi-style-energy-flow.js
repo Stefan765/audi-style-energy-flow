@@ -2333,10 +2333,16 @@
       const homeMin = Math.min(solarMin, gridMin, batteryMin);
 
       const evCharging = this._isEvCharging(evData);
-      const sceneVehicles = evData.presenceVehicles.length ? evData.presenceVehicles : evData.chargingVehicles;
-      const visibleVehicles = evData.activeVehicles.length ? evData.activeVehicles : evData.vehicles;
-      const primaryVisibleVehicle = visibleVehicles[0] || null;
-      const secondaryVisibleVehicle = visibleVehicles[1] || null;
+      const ev1Vehicle = evData.vehicles.find((v) => v.key === 'ev1') || null;
+      const heatPumpVehicle = evData.vehicles.find((v) => v.key === 'ev2') || null;
+      
+      const sceneVehicles = evData.presenceVehicles.length
+        ? evData.presenceVehicles.filter((v) => v.key === 'ev1')
+        : evData.chargingVehicles.filter((v) => v.key === 'ev1');
+      
+      const primaryVisibleVehicle = ev1Vehicle;
+      const secondaryVisibleVehicle = heatPumpVehicle;
+
       const evSceneActive = evData.hasPresenceEntities
         ? (evCharging || evData.presenceVehicles.length > 0)
         : evCharging;
