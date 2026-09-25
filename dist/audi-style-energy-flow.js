@@ -1847,9 +1847,9 @@
       let sceneProfile;
     
       if (this._ev2Configured) {
-        sceneProfile = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
+        sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
       } else if (sceneKey.includes('dual_charging')) {
-        sceneProfile = DAY_CLEAR_DUAL_CHARGING_COMPONENTS;
+        sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
       } else if (sceneKey.includes('charging')) {
         sceneProfile = DAY_CLEAR_CHARGING_COMPONENTS;
       } else {
