@@ -2788,7 +2788,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       return POSITION_EDITOR_GROUPS.filter((group) => {
         if (!group.scene) return true;
         if (group.scene === 'charging') return sceneKey.includes('charging');
-        if (group.scene === 'dual_charging') return sceneKey.includes('dual_charging');
+        if (group.scene === 'charging') return sceneKey.includes('charging');
         return true;
       });
     }
