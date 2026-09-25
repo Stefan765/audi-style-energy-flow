@@ -3802,8 +3802,10 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
               <input type="number" data-path="thresholds.grid_min_w" value="${safeNum(cfg.thresholds?.grid_min_w, 50)}">
               <label>${this._t('editor.field_battery_threshold', 'Battery threshold (W)')}</label>
               <input type="number" data-path="thresholds.battery_min_w" value="${safeNum(cfg.thresholds?.battery_min_w, 50)}">
-              <label>EV threshold (W)</label>
+              <label>EV 1 threshold (W)</label>
               <input type="number" data-path="ev_min_w" value="${safeNum(cfg.ev_min_w, 150)}">
+              <label>Wärmepumpe threshold (W)</label>
+              <input type="number" data-path="ev2_min_w" value="${safeNum(cfg.ev2_min_w, 50)}">
             </div>
           </div>
 
@@ -3813,8 +3815,8 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             <div class="grid">
               <label>EV 1 label</label>
               <input data-path="ev_label" value="${this._escapeHtml(cfg.ev_label || '')}">
-              <label>EV 2 label</label>
-              <input data-path="ev2_label" value="${this._escapeHtml(cfg.ev2_label || '')}">
+              <label>Wärmepumpe label</label>
+              <input data-path="ev2_label" value="${this._escapeHtml(cfg.ev2_label || 'Wärmepumpe')}">
               <label>Roof Array A label</label>
               <input data-path="roof_a_label" value="${this._escapeHtml(cfg.roof_a_label || 'ARRAY A')}">
               <label>Roof Array B label</label>
