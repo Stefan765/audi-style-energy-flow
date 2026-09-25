@@ -2239,7 +2239,7 @@
                 <g class="flow-node ev-hidden" id="ev2-node-group" transform="translate(106, 316)">
                   <circle class="flow-node-bg" id="node-ev2-bg" cx="0" cy="0" r="5"></circle>
                   <line class="flow-node-guide" id="flow-ev2-guide" x1="0" y1="-18" x2="0" y2="12"></line>
-                  <text class="flow-label" id="flow-ev2-label" x="0" y="-26">Wärmepumpe</text>
+                  <text class="flow-label" id="flow-ev2-label" x="0" y="-26">EV 2</text>
                   <text class="flow-power" id="flow-ev2-power" x="0" y="-8" text-anchor="end">0.0 kW</text>
                   <text class="flow-status" id="flow-ev2-status" x="0" y="24">${this._t('card.status.off', 'OFF')}</text>
                 </g>
