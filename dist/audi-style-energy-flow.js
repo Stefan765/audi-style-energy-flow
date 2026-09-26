@@ -3713,7 +3713,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- Visual layout editor â€” prominent, at the top -->
+          <!-- Visual layout editor prominent, at the top -->
           <div class="block">
             <h4>${this._t('editor.section_scene_positions', 'Scene positions')}</h4>
             <div class="visual-editor-btn-wrap">
@@ -3749,7 +3749,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
           <div class="block">
             <h4>Grid</h4>
             <div class="grid">
-              <span class="group-label">Combined sensor (+ = import, âˆ’ = export)</span>
+              <span class="group-label">Combined sensor (+ = import, - = export)</span>
               ${this._entitySelectRow(this._t('editor.sensor_grid', 'Grid Power'), 'entities.grid_power', powerIds('entities.grid_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.grid_import_power || cfg.entities?.grid_export_power) ? '' : `
               <div class="row">
@@ -3757,7 +3757,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
                 <input type="checkbox" data-path="grid_invert" ${cfg.grid_invert ? 'checked' : ''}>
               </div>`}
               <hr class="group-divider">
-              <span class="group-label">â€” or â€” separate sensors (always positive)</span>
+              <span class="group-label">- or - separate sensors (always positive)</span>
               ${this._entitySelectRow(this._t('editor.sensor_grid_import', 'Grid Import Power'), 'entities.grid_import_power', powerIds('entities.grid_import_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${this._entitySelectRow(this._t('editor.sensor_grid_export', 'Grid Export Power'), 'entities.grid_export_power', powerIds('entities.grid_export_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.grid_import_power || cfg.entities?.grid_export_power) ? `<span class="note">grid_invert not needed when using separate import/export sensors</span>` : ''}
@@ -3768,7 +3768,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
           <div class="block">
             <h4>Battery</h4>
             <div class="grid">
-              <span class="group-label">Combined sensor (+ = charging, âˆ’ = discharging)</span>
+              <span class="group-label">Combined sensor (+ = charging, - = discharging)</span>
               ${this._entitySelectRow(this._t('editor.sensor_battery', 'Battery Power'), 'entities.battery_power', powerIds('entities.battery_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.battery_charge_power || cfg.entities?.battery_discharge_power) ? '' : `
               <div class="row">
@@ -3776,7 +3776,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
                 <input type="checkbox" data-path="battery_invert" ${cfg.battery_invert ? 'checked' : ''}>
               </div>`}
               <hr class="group-divider">
-              <span class="group-label">â€” or â€” separate sensors (always positive)</span>
+              <span class="group-label">- or - separate sensors (always positive)</span>
               ${this._entitySelectRow(this._t('editor.sensor_battery_charge', 'Battery Charge Power'), 'entities.battery_charge_power', powerIds('entities.battery_charge_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${this._entitySelectRow(this._t('editor.sensor_battery_discharge', 'Battery Discharge Power'), 'entities.battery_discharge_power', powerIds('entities.battery_discharge_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${(cfg.entities?.battery_charge_power || cfg.entities?.battery_discharge_power) ? `<span class="note">battery_invert not needed when using separate charge/discharge sensors</span>` : ''}
