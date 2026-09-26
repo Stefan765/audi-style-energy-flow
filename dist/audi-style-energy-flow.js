@@ -2462,7 +2462,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       const gridExport = Math.max(0, -gridPower);
       const batteryCharge = Math.max(0, batteryPower);
       const batteryDischarge = Math.max(0, -batteryPower);
-      const evDraw = evSceneActive ? Math.max(0, evPower) : 0;
+      //const evDraw = evSceneActive ? Math.max(0, evPower) : 0;
       const ev1Draw = Math.max(0, ev1?.power || 0);
       const ev2Draw = Math.max(0, ev2?.power || 0);
       
