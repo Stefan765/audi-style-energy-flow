@@ -3684,7 +3684,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
         </style>
         <div class="wrap">
 
-          <!-- â‘   General -->
+          <!-- General -->
           <div class="block">
             <h4>${this._t('editor.section_general', 'General')}</h4>
             <div class="grid">
@@ -3713,7 +3713,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- â‘¡ Visual layout editor â€” prominent, at the top -->
+          <!-- Visual layout editor â€” prominent, at the top -->
           <div class="block">
             <h4>${this._t('editor.section_scene_positions', 'Scene positions')}</h4>
             <div class="visual-editor-btn-wrap">
@@ -3726,9 +3726,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </details>
           </div>
 
-          <!-- â‘¢ Solar sensors -->
+          <!-- Solar sensors -->
           <div class="block">
-            <h4>â˜€ï¸ Solar</h4>
+            <h4>Solar</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_solar', 'Solar Power'), 'entities.solar_power', powerIds('entities.solar_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
             </div>
@@ -3745,9 +3745,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </details>
           </div>
 
-          <!-- â‘£ Grid sensors -->
+          <!-- Grid sensors -->
           <div class="block">
-            <h4>âš¡ Grid</h4>
+            <h4>Grid</h4>
             <div class="grid">
               <span class="group-label">Combined sensor (+ = import, âˆ’ = export)</span>
               ${this._entitySelectRow(this._t('editor.sensor_grid', 'Grid Power'), 'entities.grid_power', powerIds('entities.grid_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
@@ -3764,9 +3764,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- â‘¤ Battery sensors -->
+          <!-- Battery sensors -->
           <div class="block">
-            <h4>Ã°Å¸â€â€¹ Battery</h4>
+            <h4>Battery</h4>
             <div class="grid">
               <span class="group-label">Combined sensor (+ = charging, âˆ’ = discharging)</span>
               ${this._entitySelectRow(this._t('editor.sensor_battery', 'Battery Power'), 'entities.battery_power', powerIds('entities.battery_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
@@ -3786,17 +3786,17 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- â‘¥ Load -->
+          <!-- Load -->
           <div class="block">
-            <h4>Ã°Å¸Â  Home / Load</h4>
+            <h4>Home / Load</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_load', 'Load Power'), 'entities.load_power', powerIds('entities.load_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
             </div>
           </div>
 
-          <!-- â‘¦ EV 1 -->
+          <!-- EV 1 -->
           <div class="block">
-            <h4>Ã°Å¸Å¡â€” EV 1</h4>
+            <h4>EV 1</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_ev_power', 'EV Power'), 'entities.ev_power', powerIds('entities.ev_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
               ${this._entitySelectRow(this._t('editor.sensor_ev_battery', 'EV Battery %'), 'entities.ev_battery', pctIds('entities.ev_battery'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
@@ -3832,9 +3832,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
           </div>
 
 
-          <!-- â‘¨ System -->
+          <!-- System -->
           <div class="block">
-            <h4>Ã°Å¸Å’Â¤ System</h4>
+            <h4>System</h4>
             <div class="grid">
               ${this._entitySelectRow(this._t('editor.sensor_weather', 'Weather Entity'), 'entities.weather', weatherIds, this._t('editor.placeholder_weather', '-- select weather --'))}
               ${this._entitySelectRow(this._t('editor.sensor_sun', 'Sun Entity'), 'entities.sun', sunIds, this._t('editor.placeholder_sun', '-- select sun --'))}
@@ -3842,9 +3842,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             <div class="hint">${this._t('editor.hint_entities', 'Dropdowns filtered by unit / device class.')}</div>
           </div>
 
-          <!-- â‘© Thresholds -->
+          <!-- Thresholds -->
           <div class="block">
-            <h4>âš™ï¸ Thresholds</h4>
+            <h4>Thresholds</h4>
             <div class="grid">
               <label>${this._t('editor.field_solar_threshold', 'Solar threshold (W)')}</label>
               <input type="number" data-path="thresholds.solar_min_w" value="${safeNum(cfg.thresholds?.solar_min_w, 50)}">
@@ -3859,9 +3859,9 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- â‘ª Labels -->
+          <!-- Labels -->
           <div class="block">
-            <h4>Ã°Å¸ÂÂ· Labels</h4>
+            <h4>Labels</h4>
             <div class="grid">
               <label>EV 1 label</label>
               <input data-path="ev_label" value="${this._escapeHtml(cfg.ev_label || '')}">
@@ -3874,7 +3874,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
             </div>
           </div>
 
-          <!-- â‘« Background -->
+          <!-- Background -->
           <div class="block">
             <h4>${this._t('editor.section_dynamic_bg', 'Background')}</h4>
             <div class="grid">
