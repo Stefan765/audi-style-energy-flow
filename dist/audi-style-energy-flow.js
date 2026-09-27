@@ -2342,8 +2342,11 @@
           )
         : false;
 
-      const ev1Vehicle = evData.vehicles.find((v) => v.key === 'ev1') || null;
-      const heatPumpVehicle = evData.vehicles.find((v) => v.key === 'ev2') || null;
+      
+      const ev1Vehicle = 
+        evData.vehicles.find((v) => v.key === 'ev1') || null;
+      const heatPumpVehicle = 
+        evData.vehicles.find((v) => v.key === 'ev2') || null;
       
       const sceneVehicles = evData.presenceVehicles.length
         ? evData.presenceVehicles.filter((v) => v.key === 'ev1')
