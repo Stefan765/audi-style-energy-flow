@@ -841,6 +841,7 @@
       battery_level: '',
       ev_power: '',
       ev_battery: '',
+      ev_range: '',
       ev_charge_switch: '',
       ev_presence: '',
       ev2_power: '',
@@ -1162,7 +1163,7 @@
         e.roof_a_power, e.roof_a_voltage, e.roof_a_current,
         e.roof_b_power, e.roof_b_voltage, e.roof_b_current,
         e.load_power,
-        e.ev_power, e.ev_battery, e.ev_charge_switch, e.ev_presence,
+        e.ev_power, e.ev_battery, e.ev_range, e.ev_charge_switch, e.ev_presence,
         e.ev2_power, e.ev2_battery, e.ev2_charge_switch, e.ev2_presence,
         e.weather,
         e.sun || 'sun.sun',
@@ -1331,6 +1332,7 @@
           key: 'ev1',
           powerEntity: this._config.entities.ev_power,
           batteryEntity: this._config.entities.ev_battery,
+          rangeEntity: this._config.entities.ev_range,
           chargeSwitchEntity: this._config.entities.ev_charge_switch,
           presenceEntity: this._config.entities.ev_presence,
           customLabel: this._config.ev_label
@@ -1350,6 +1352,7 @@
           const configured = !!(slot.powerEntity || slot.batteryEntity || slot.chargeSwitchEntity || slot.presenceEntity);
           const powerState = this._entityState(slot.powerEntity);
           const batteryState = this._entityState(slot.batteryEntity);
+          const rangeState = this._entityState(slot.rangeEntity);
           const switchState = this._entityState(slot.chargeSwitchEntity);
           const presenceState = this._entityState(slot.presenceEntity);
           const batteryPct = [
@@ -1371,6 +1374,11 @@
             hasBatteryEntity: Number.isFinite(batteryPct) || !!batteryState,
             power: Math.max(0, toWatt(powerState)),
             battery: Number.isFinite(batteryPct) ? batteryPct : 0,
+            range: Number.isFinite(Number(rangeState?.state))
+              ? Number(rangeState.state)
+              : null,
+            
+            rangeUnit: rangeState?.attributes?.unit_of_measurement || 'km',
             switchOn: switchState?.state === 'on',
             present: isTruthyPresenceState(presenceState),
             customLabel: String(slot.customLabel || '').trim(),
@@ -2233,7 +2241,8 @@
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
-                  <text class="flow-status" id="flow-ev-status" x="0" y="110">${this._t('card.status.off', 'OFF')}</text>
+                  <text class="flow-status" id="flow-ev-range" x="0" y="96"> Reichweite -- km</text>
+                  <text class="flow-status" id="flow-ev-status" x="0" y="116">${this._t('card.status.off', 'OFF')}</text>
                 </g>
 
                 <g class="flow-node ev-hidden" id="ev2-node-group" transform="translate(106, 316)">
@@ -2437,6 +2446,18 @@
       const ev1Arrow = ((ev1.power || 0) > 0 || ev1.switchOn) ? '▲' : '';
       this._setText('#flow-ev-arrow', ev1Arrow);
       this._setText('#flow-ev-pct', ev1.batteryText || '--%');
+      const evRangeEl = this.shadowRoot.querySelector('#flow-ev-range');
+      if (evRangeEl) {
+        if (Number.isFinite(ev1.range)) {
+          this._setText(
+            '#flow-ev-range',
+            `Reichweite ${Math.round(ev1.range)} ${ev1.rangeUnit || 'km'}`
+          );
+          evRangeEl.style.display = '';
+        } else {
+          evRangeEl.style.display = 'none';
+        }
+      }
       this._setText('#flow-ev2-label', ev2.labelText || cfg.ev2_label || 'Wärmepumpe');
 
       this._setText('#flow-ev2-power', this._formatKW(ev2.power || 0));
