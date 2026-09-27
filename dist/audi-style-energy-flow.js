@@ -2472,7 +2472,7 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
       // EV1 hängt vom Charging-Zustand ab.
       // EV2 ist ein normaler Dauerverbraucher und wird unabhängig
       // vom EV1-Charging-Zustand immer berücksichtigt.
-      const ev1VisibleDraw = ev1Charging ? ev1Draw : 0;
+      const ev1VisibleDraw = evCharging ? ev1Draw : 0;
       const ev2VisibleDraw = ev2Draw;
       
       const evDraw = ev1VisibleDraw + ev2VisibleDraw;
