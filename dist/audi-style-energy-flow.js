@@ -2019,6 +2019,12 @@
             opacity: 0.9;
             display: none;
           }
+          #flow-ev-range {
+            display: inline;
+            font-size: calc(8.5px * var(--flow-font-scale));
+            font-weight: 600;
+            opacity: 0.9;
+          }
           .roof-meta {
             fill: #f8fafc;
             text-shadow: 0 1px 2px rgba(2, 6, 23, 0.55);
@@ -2240,7 +2246,7 @@
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
-                  <text class="flow-status" id="flow-ev-range" x="0" y="45" text-anchor="middle" style="display:block; opacity:1;"> Reichweite -- km</text>
+                  <text class="flow-status" id="flow-ev-range" x="0" y="96" text-anchor="middle" style="display:block; opacity:1;"> Reichweite -- km</text>
                   <text class="flow-status" id="flow-ev-status" x="0" y="116">${this._t('card.status.off', 'OFF')}</text>
                 </g>
 
@@ -2452,7 +2458,7 @@
             '#flow-ev-range',
             `Reichweite ${Math.round(ev1.range)} ${ev1.rangeUnit || 'km'}`
           );
-          evRangeEl.style.display = '';
+          evRangeEl.style.display = 'inline';
         } else {
           evRangeEl.style.display = 'none';
         }
