@@ -2246,7 +2246,7 @@
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
-                  <text class="flow-status" id="flow-ev-range" x="0" y="96" text-anchor="middle" style="display:block; opacity:1;"> Reichweite -- km</text>
+                  <text class="flow-status" id="flow-ev-range" x="0" y="94" text-anchor="middle" style="display:block; opacity:1;"> -- km</text>
                   <text class="flow-status" id="flow-ev-status" x="0" y="116">${this._t('card.status.off', 'OFF')}</text>
                 </g>
 
@@ -2456,7 +2456,7 @@
         if (Number.isFinite(ev1.range)) {
           this._setText(
             '#flow-ev-range',
-            `Reichweite ${Math.round(ev1.range)} ${ev1.rangeUnit || 'km'}`
+            `${Math.round(ev1.range)} ${ev1.rangeUnit || 'km'}`
           );
           evRangeEl.style.display = 'inline';
         } else {
