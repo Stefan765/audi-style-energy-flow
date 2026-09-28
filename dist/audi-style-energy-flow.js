@@ -2246,7 +2246,7 @@
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
-                  <text class="flow-status" id="flow-ev-range" x="0" y="96" text-anchor="middle"> -- km</text>
+                  <text class="flow-status" id="flow-ev-range" x="0" y="96" text-anchor="middle">-- km</text>
                   <text class="flow-status" id="flow-ev-status" x="0" y="116">${this._t('card.status.off', 'OFF')}</text>
                 </g>
 
