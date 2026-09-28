@@ -1374,8 +1374,10 @@
             hasBatteryEntity: Number.isFinite(batteryPct) || !!batteryState,
             power: Math.max(0, toWatt(powerState)),
             battery: Number.isFinite(batteryPct) ? batteryPct : 0,
-            range: 999,
-            rangeUnit: 'km',
+            range: Number.isFinite(Number(rangeState?.state))
+              ? Number(rangeState.state)
+              : null,
+            rangeUnit: rangeState?.attributes?.unit_of_measurement || 'km',
             switchOn: switchState?.state === 'on',
             present: isTruthyPresenceState(presenceState),
             customLabel: String(slot.customLabel || '').trim(),
