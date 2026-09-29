@@ -606,7 +606,7 @@
     'ev-label': Object.freeze({ x: 14, y: -102 }),
     'ev-power': Object.freeze({ x: 22, y: -84 }),
     'ev-pct': Object.freeze({ x: 41, y: -84 }),
-    'ev-range': Object.freeze({ x: 22, y: -67 }),
+    'ev-range': Object.freeze({ x: 14, y: -67 }),
     'ev-guide': Object.freeze({ x1: 0, y1: -50, x2: 0, y2: -10 }),
     'ev2-label': Object.freeze({ x: 416.77, y: -121.73 }),
     'ev2-power': Object.freeze({ x: 416.77, y: -105.73 }),
@@ -2023,7 +2023,7 @@
           }
           #flow-ev-range {
             display: inline;
-            font-size: calc(8.5px * var(--flow-font-scale));
+            font-size: calc(10px * var(--flow-font-scale));
             font-weight: 600;
             opacity: 0.9;
           }
