@@ -428,6 +428,7 @@
         sensor_battery_level: 'Batteriestand %',
         sensor_ev_power: 'EV Leistung',
         sensor_ev_battery: 'EV Batterie %',
+        sensor_ev_range: 'EV Reichweite',
         sensor_ev_switch: 'EV Lade-Switch',
         sensor_ev2_power: 'EV 2 Leistung',
         sensor_ev2_battery: 'EV 2 Batterie %',
@@ -3829,14 +3830,52 @@ const batteryStatusEl = this.shadowRoot.querySelector('#flow-battery-status');
           <div class="block">
             <h4>EV 1</h4>
             <div class="grid">
-              ${this._entitySelectRow(this._t('editor.sensor_ev_power', 'EV Power'), 'entities.ev_power', powerIds('entities.ev_power'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
-              ${this._entitySelectRow(this._t('editor.sensor_ev_battery', 'EV Battery %'), 'entities.ev_battery', pctIds('entities.ev_battery'), this._t('editor.placeholder_sensor', '-- select sensor --'))}
-              ${this._entitySelectRow(this._t('editor.sensor_ev_switch', 'EV Charge Switch'), 'entities.ev_charge_switch', switchIds, this._t('editor.placeholder_switch', '-- select switch --'))}
-              ${this._entitySelectRow('EV 1 Presence', 'entities.ev_presence', presenceIds, '-- select presence entity --')}
+              ${this._entitySelectRow(
+                this._t('editor.sensor_ev_power', 'EV Power'),
+                'entities.ev_power',
+                powerIds('entities.ev_power'),
+                this._t('editor.placeholder_sensor', '-- select sensor --')
+              )}
+          
+              ${this._entitySelectRow(
+                this._t('editor.sensor_ev_battery', 'EV Battery %'),
+                'entities.ev_battery',
+                pctIds('entities.ev_battery'),
+                this._t('editor.placeholder_sensor', '-- select sensor --')
+              )}
+          
+              ${this._entitySelectRow(
+                this._t('editor.sensor_ev_range', 'EV Range'),
+                'entities.ev_range',
+                sensorIds,
+                this._t('editor.placeholder_sensor', '-- select sensor --')
+              )}
+          
+              ${this._entitySelectRow(
+                this._t('editor.sensor_ev_switch', 'EV Charge Switch'),
+                'entities.ev_charge_switch',
+                switchIds,
+                this._t('editor.placeholder_switch', '-- select switch --')
+              )}
+          
+              ${this._entitySelectRow(
+                'EV 1 Presence',
+                'entities.ev_presence',
+                presenceIds,
+                '-- select presence entity --'
+              )}
             </div>
+          
             <div class="row">
-              <label>${this._t('editor.field_ev_in_load', 'EV power already included in home load')}</label>
-              <input type="checkbox" data-path="ev_in_load" ${cfg.ev_in_load ? 'checked' : ''}>
+              <label>${this._t(
+                'editor.field_ev_in_load',
+                'EV power already included in home load'
+              )}</label>
+              <input
+                type="checkbox"
+                data-path="ev_in_load"
+                ${cfg.ev_in_load ? 'checked' : ''}
+              >
             </div>
           </div>
 
