@@ -596,7 +596,7 @@
     'grid-power': Object.freeze({ x: 46, y: 121 }),
     'grid-guide': Object.freeze({ x1: 46, y1: 110, x2: 46, y2: 110 }),
     'load-label': Object.freeze({ x: -34, y: -25 }),
-    'load-power': Object.freeze({ x: -34, y: 8 }),
+    'load-power': Object.freeze({ x: -34, y: 15 }),
     'load-guide': Object.freeze({ x1: -34, y1: 8, x2: -34, y2: 55 }),
     'battery-label': Object.freeze({ x: 15, y: 102 }),
     'battery-power': Object.freeze({ x: 14, y: 117 }),
