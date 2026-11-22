@@ -2262,7 +2262,7 @@
                   <circle class="flow-node-bg" id="node-ev-bg" cx="0" cy="0" r="5"></circle>
                   <line class="flow-node-guide" id="flow-ev-guide" x1="0" y1="12" x2="0" y2="42"></line>
                   <text class="flow-label" id="flow-ev-label" x="0" y="61">${this._t('card.node.ev', 'EV')}</text>
-                  <text id="flow-ev-lock" x="38" y="61" fill="#94a3b8">?</text>
+                  <text id="flow-ev-lock" x="55" y="61" fill="#94a3b8">?</text>
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
