@@ -2261,10 +2261,8 @@
                 <g class="flow-node" id="ev-node-group" transform="translate(184, 332)">
                   <circle class="flow-node-bg" id="node-ev-bg" cx="0" cy="0" r="5"></circle>
                   <line class="flow-node-guide" id="flow-ev-guide" x1="0" y1="12" x2="0" y2="42"></line>
-                  <text class="flow-label" id="flow-ev-label" x="0" y="61">
-                    <tspan id="flow-ev-label-text">${this._t('card.node.ev', 'EV')}</tspan>
-                    <tspan id="flow-ev-lock" dx="6" fill="#94a3b8" font-size="12">?</tspan>
-                  </text>
+                  <text class="flow-label" id="flow-ev-label" x="0" y="61">${this._t('card.node.ev', 'EV')}</text>
+                  <text id="flow-ev-lock" x="0" y="61" dx="45" text-anchor="start" fill="#94a3b8" font-size="12">?</text>
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
@@ -2485,7 +2483,7 @@
       const batteryArrow = !batteryConfigured ? '' : (batteryPower > batteryMin ? '▲' : (batteryPower < -batteryMin ? '▼' : ''));
       this._setText('#flow-battery-arrow', batteryArrow);
       this._setText('#flow-battery-pct', batteryConfigured ? `${Math.round(batteryLevel)}%` : '');
-      this._setText('#flow-ev-label-text', ev1.labelText || this._t('card.node.ev', 'EV'));
+      this._setText('#flow-ev-label', ev1.labelText || this._t('card.node.ev', 'EV'));
       const lockState = this._entityState(cfg.entities.ev_door_lock)?.state;
       const lockEl = this.shadowRoot.querySelector('#flow-ev-lock');
       
