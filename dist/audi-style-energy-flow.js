@@ -2202,19 +2202,21 @@
                   <text class="flow-status" id="flow-solar-status" x="0" y="-62">${this._t('card.status.inactive', 'INATTIVO')}</text>
                 </g>
 
+
                 <g id="roof-array-a-group">
-                  <text class="roof-meta roof-meta-label" id="flow-roof-a-label" x="238" y="124">ARRAY A</text>
+                  <text class="roof-meta roof-meta-label" id="flow-roof-a-label" x="238" y="116">ARRAY A</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-a-power" x="238" y="136">0.0 kW</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-a-voltage" x="238" y="147">0 V</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-a-current" x="238" y="158">0 A</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-a-voltage" x="238" y="153">0 V</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-a-current" x="238" y="167">0 A</text>
+                </g>
+                
+                <g id="roof-array-b-group">
+                  <text class="roof-meta roof-meta-label" id="flow-roof-b-label" x="334" y="206">ARRAY B</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-b-power" x="334" y="226">0.0 kW</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-b-voltage" x="334" y="243">0 V</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-b-current" x="334" y="257">0 A</text>
                 </g>
 
-                <g id="roof-array-b-group">
-                  <text class="roof-meta roof-meta-label" id="flow-roof-b-label" x="334" y="214">ARRAY B</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-b-power" x="334" y="226">0.0 kW</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-b-voltage" x="334" y="237">0 V</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-b-current" x="334" y="248">0 A</text>
-                </g>
 
                 <g class="flow-node" transform="translate(448, 336)">
                   <circle class="flow-node-bg" id="node-grid-bg" cx="0" cy="0" r="5"></circle>
