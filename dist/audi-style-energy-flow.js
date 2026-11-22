@@ -2206,14 +2206,14 @@
                 <g id="roof-array-a-group">
                   <text class="roof-meta roof-meta-label" id="flow-roof-a-label" x="238" y="116">ARRAY A</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-a-power" x="238" y="136">0.0 kW</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-a-voltage" x="238" y="153">0 V</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-a-voltage" x="238" y="153">– kWh</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-a-current" x="238" y="167">0 A</text>
                 </g>
                 
                 <g id="roof-array-b-group">
                   <text class="roof-meta roof-meta-label" id="flow-roof-b-label" x="334" y="206">ARRAY B</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-b-power" x="334" y="226">0.0 kW</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-b-voltage" x="334" y="243">0 V</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-b-voltage" x="334" y="243">– kWh</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-b-current" x="334" y="257">0 A</text>
                 </g>
 
@@ -2289,11 +2289,28 @@
         }
       }
       const roofAPower = this._smooth('roof_a', toWatt(this._entityState(cfg.entities.roof_a_power)));
-      const roofAVoltage = safeNum(this._entityState(cfg.entities.roof_a_voltage)?.state, 0);
+      const roofADailyEnergy = this._entityState(cfg.entities.roof_a_voltage);
       const roofACurrent = safeNum(this._entityState(cfg.entities.roof_a_current)?.state, 0);
+      
       const roofBPower = this._smooth('roof_b', toWatt(this._entityState(cfg.entities.roof_b_power)));
-      const roofBVoltage = safeNum(this._entityState(cfg.entities.roof_b_voltage)?.state, 0);
+      const roofBDailyEnergy = this._entityState(cfg.entities.roof_b_voltage);
       const roofBCurrent = safeNum(this._entityState(cfg.entities.roof_b_current)?.state, 0);
+      
+      const formatDailyEnergy = (sensor) => {
+        if (!sensor || ['unknown', 'unavailable', ''].includes(String(sensor.state))) {
+          return '– kWh';
+        }
+      
+        const value = Number(sensor.state);
+        if (!Number.isFinite(value)) return '– kWh';
+      
+        const unit = String(sensor.attributes?.unit_of_measurement || 'kWh')
+          .trim().toLowerCase();
+      
+        if (unit !== 'wh' && unit !== 'kwh') return '– kWh';
+      
+        return `${(unit === 'wh' ? value / 1000 : value).toFixed(2)} kWh`;
+      };
       let batteryPower = toWatt(this._entityState(cfg.entities.battery_power));
       if (cfg.battery_invert) batteryPower *= -1;
       // Separate charge/discharge entities override the combined battery_power sensor.
@@ -2422,10 +2439,10 @@
       }
 
       if (roofAGroup) {
-        roofAGroup.classList.toggle('roof-hidden', !(roofAPower > 0 || roofAVoltage > 0 || roofACurrent > 0));
+        roofAGroup.classList.toggle('roof-hidden', !(roofAPower > 0 || Number(roofADailyEnergy?.state) > 0 || roofACurrent > 0));
       }
       if (roofBGroup) {
-        roofBGroup.classList.toggle('roof-hidden', !(roofBPower > 0 || roofBVoltage > 0 || roofBCurrent > 0));
+        roofBGroup.classList.toggle('roof-hidden', !(roofBPower > 0 || Number(roofBDailyEnergy?.state) > 0 || roofBCurrent > 0));
       }
       const weatherState = this._entityState(cfg.entities.weather)?.state || '';
       const period = this._scenePeriod(weatherState);
@@ -2440,11 +2457,11 @@
       this._setText('#flow-grid-power', this._formatKW(gridPower));
       this._setText('#flow-roof-a-label', String(cfg.roof_a_label || 'ARRAY A'));
       this._setText('#flow-roof-a-power', this._formatKW(roofAPower));
-      this._setText('#flow-roof-a-voltage', `${Math.round(roofAVoltage)} V`);
+      this._setText('#flow-roof-a-voltage', formatDailyEnergy(roofADailyEnergy));
       this._setText('#flow-roof-a-current', `${roofACurrent.toFixed(1)} A`);
       this._setText('#flow-roof-b-label', String(cfg.roof_b_label || 'ARRAY B'));
       this._setText('#flow-roof-b-power', this._formatKW(roofBPower));
-      this._setText('#flow-roof-b-voltage', `${Math.round(roofBVoltage)} V`);
+      this._setText('#flow-roof-b-voltage', formatDailyEnergy(roofBDailyEnergy));
       this._setText('#flow-roof-b-current', `${roofBCurrent.toFixed(1)} A`);
       this._setText('#flow-load-power', this._formatKW(loadPower));
       this._setText('#flow-battery-power', batteryConfigured ? this._formatKW(batteryPower) : '');
