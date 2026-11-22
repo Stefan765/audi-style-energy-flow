@@ -2449,7 +2449,7 @@
         roofAGroup.classList.toggle('roof-hidden', !(roofAPower > 0 || Number(roofADailyEnergy?.state) > 0 || roofACurrent > 0));
       }
       if (roofBGroup) {
-        roofBGroup.classList.toggle('roof-hidden', !(roofBPower > 0 || Number(roofBDailyEnergy?.state) > 0 || roofBCurrent > 0));
+        roofBGroup.classList.remove('roof-hidden');
       }
       const weatherState = this._entityState(cfg.entities.weather)?.state || '';
       const period = this._scenePeriod(weatherState);
