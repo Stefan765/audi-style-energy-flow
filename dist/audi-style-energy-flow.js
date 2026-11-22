@@ -2491,8 +2491,7 @@
       this._setText('#flow-battery-arrow', batteryArrow);
       this._setText('#flow-battery-pct', batteryConfigured ? `${Math.round(batteryLevel)}%` : '');
       this._setText('#flow-ev-label-text', ev1.labelText || this._t('card.node.ev', 'EV'));
-      const lockState = this._entityState(cfg.entities.ev_door_lock)?.state;
-      const lockEl = this.shadowRoot.querySelector('#flow-ev-lock');
+      
       
       const lockState = this._entityState(cfg.entities.ev_door_lock)?.state;
       const lockEl = this.shadowRoot.querySelector('#flow-ev-lock');
