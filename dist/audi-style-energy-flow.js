@@ -844,6 +844,7 @@
       battery_level: '',
       ev_power: '',
       ev_battery: '',
+      ev_door_lock: '',
       ev_range: '',
       ev_charge_switch: '',
       ev_presence: '',
@@ -1167,6 +1168,7 @@
         e.roof_b_power, e.roof_b_voltage, e.roof_b_current,
         e.load_power,
         e.ev_power, e.ev_battery, e.ev_range, e.ev_charge_switch, e.ev_presence,
+        e.ev_door_lock,
         e.ev2_power, e.ev2_battery, e.ev2_charge_switch, e.ev2_presence,
         e.weather,
         e.sun || 'sun.sun',
@@ -2028,6 +2030,11 @@
             font-weight: 600;
             opacity: 0.9;
           }
+          #flow-ev-lock {
+            font-size: calc(12px * var(--flow-font-scale));
+            font-weight: 600;
+            text-anchor: start;
+          }
           .roof-meta {
             fill: #f8fafc;
             text-shadow: 0 1px 2px rgba(2, 6, 23, 0.55);
@@ -2255,6 +2262,7 @@
                   <circle class="flow-node-bg" id="node-ev-bg" cx="0" cy="0" r="5"></circle>
                   <line class="flow-node-guide" id="flow-ev-guide" x1="0" y1="12" x2="0" y2="42"></line>
                   <text class="flow-label" id="flow-ev-label" x="0" y="61">${this._t('card.node.ev', 'EV')}</text>
+                  <text id="flow-ev-lock" x="38" y="61" fill="#94a3b8">?</text>
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
@@ -2476,6 +2484,21 @@
       this._setText('#flow-battery-arrow', batteryArrow);
       this._setText('#flow-battery-pct', batteryConfigured ? `${Math.round(batteryLevel)}%` : '');
       this._setText('#flow-ev-label', ev1.labelText || this._t('card.node.ev', 'EV'));
+      const lockState = this._entityState(cfg.entities.ev_door_lock)?.state;
+      const lockEl = this.shadowRoot.querySelector('#flow-ev-lock');
+      
+      if (lockEl) {
+        if (lockState === 'off') {
+          lockEl.textContent = '🔒';
+          lockEl.setAttribute('fill', '#4ade80');
+        } else if (lockState === 'on') {
+          lockEl.textContent = '🔓';
+          lockEl.setAttribute('fill', '#fb7185');
+        } else {
+          lockEl.textContent = '?';
+          lockEl.setAttribute('fill', '#94a3b8');
+        }
+      }
       this._setText('#flow-ev-power', this._formatKW(ev1.power || 0));
       const ev1Arrow = ((ev1.power || 0) > 0 || ev1.switchOn) ? '▲' : '';
       this._setText('#flow-ev-arrow', ev1Arrow);
