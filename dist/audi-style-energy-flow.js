@@ -2037,7 +2037,7 @@
                     drop-shadow(0 0 9px rgba(0, 0, 0, 0.62));
           }
           .roof-meta-label {
-            font-size: calc(9px * var(--flow-font-scale));
+            font-size: calc(10px * var(--flow-font-scale));
             font-weight: 700;
             letter-spacing: 0.05em;
             text-transform: uppercase;
