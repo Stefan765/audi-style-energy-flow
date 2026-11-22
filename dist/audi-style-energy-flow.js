@@ -2043,7 +2043,7 @@
             text-transform: uppercase;
           }
           .roof-meta-value {
-            font-size: calc(8px * var(--flow-font-scale));
+            font-size: calc(15.5px * var(--flow-font-scale));
             font-weight: 600;
           }
           #flow-battery-status {
