@@ -2046,6 +2046,13 @@
             font-size: calc(15.5px * var(--flow-font-scale));
             font-weight: 600;
           }
+          #flow-roof-a-voltage,
+          #flow-roof-b-voltage,
+          #flow-roof-a-current,
+          #flow-roof-b-current {
+            font-size: calc(10px * var(--flow-font-scale));
+            font-weight: 600;
+          }
           #flow-battery-status {
             display: inline;
             font-size: calc(9px * var(--flow-font-scale));
