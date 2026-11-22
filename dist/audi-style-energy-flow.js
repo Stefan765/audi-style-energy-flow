@@ -2206,14 +2206,14 @@
                 <g id="roof-array-a-group">
                   <text class="roof-meta roof-meta-label" id="flow-roof-a-label" x="238" y="116">ARRAY A</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-a-power" x="238" y="136">0.0 kW</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-a-voltage" x="238" y="153">– kWh</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-a-voltage" x="238" y="153">– kW/d</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-a-current" x="238" y="167">0 A</text>
                 </g>
                 
                 <g id="roof-array-b-group">
                   <text class="roof-meta roof-meta-label" id="flow-roof-b-label" x="334" y="206">ARRAY B</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-b-power" x="334" y="226">0.0 kW</text>
-                  <text class="roof-meta roof-meta-value" id="flow-roof-b-voltage" x="334" y="243">– kWh</text>
+                  <text class="roof-meta roof-meta-value" id="flow-roof-b-voltage" x="334" y="243">– kW/d</text>
                   <text class="roof-meta roof-meta-value" id="flow-roof-b-current" x="334" y="257">0 A</text>
                 </g>
 
