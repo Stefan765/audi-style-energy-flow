@@ -2265,8 +2265,8 @@
                     <tspan id="flow-ev-label-text">${this._t('card.node.ev', 'EV')}</tspan>
                   </text>
                   
-                  <g id="flow-ev-lock" transform="translate(44, 50)"
-                     fill="none" stroke="#94a3b8" stroke-width="1.6"
+                  <g id="flow-ev-lock" fill="none"
+                     stroke="#94a3b8" stroke-width="1.6"
                      stroke-linecap="round" stroke-linejoin="round">
                     <rect x="1" y="5" width="10" height="8" rx="1.5"></rect>
                     <path id="flow-ev-lock-shackle"
@@ -2498,18 +2498,26 @@
       const lockState = this._entityState(cfg.entities.ev_door_lock)?.state;
       const lockEl = this.shadowRoot.querySelector('#flow-ev-lock');
       const shackle = this.shadowRoot.querySelector('#flow-ev-lock-shackle');
+      const labelEl = this.shadowRoot.querySelector('#flow-ev-label-text');
       
-      if (lockEl && shackle) {
+      if (lockEl && shackle && labelEl) {
+        // Schloss automatisch rechts neben AUDI Q8 positionieren
+        const bbox = labelEl.getBBox();
+        const x = bbox.x + bbox.width + 6;
+        const y = bbox.y + (bbox.height - 13) / 2;
+      
+        lockEl.setAttribute('transform', `translate(${x}, ${y})`);
+      
         if (lockState === 'off') {
-          // Verriegelt
+          // Verschlossen: Weiß
           lockEl.setAttribute('stroke', '#ffffff');
           shackle.setAttribute('d', 'M3 5 V3.5 A3 3 0 0 1 9 3.5 V5');
         } else if (lockState === 'on') {
-          // Entriegelt
+          // Offen: Grau
           lockEl.setAttribute('stroke', '#94a3b8');
           shackle.setAttribute('d', 'M3 5 V3.5 A3 3 0 0 1 9 3.5 V1');
         } else {
-          // Nicht verfügbar
+          // Nicht verfügbar: Grau
           lockEl.setAttribute('stroke', '#94a3b8');
           shackle.setAttribute('d', 'M3 5 V3.5 A3 3 0 0 1 9 3.5 V5');
         }
