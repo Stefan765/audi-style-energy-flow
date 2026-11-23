@@ -2506,7 +2506,7 @@
         const x = bbox.x + bbox.width + 6;
         const y = bbox.y + (bbox.height - 13) / 2;
       
-        lockEl.setAttribute('transform', `translate(${x}, ${y})`);
+        lockEl.setAttribute('transform', `translate(${x}, ${y}) scale(0.8)`);
       
         if (lockState === 'off') {
           // Verschlossen: Weiß
