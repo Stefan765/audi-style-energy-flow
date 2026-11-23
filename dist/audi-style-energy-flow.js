@@ -2263,8 +2263,15 @@
                   <line class="flow-node-guide" id="flow-ev-guide" x1="0" y1="12" x2="0" y2="42"></line>
                   <text class="flow-label" id="flow-ev-label" x="0" y="61">
                     <tspan id="flow-ev-label-text">${this._t('card.node.ev', 'EV')}</tspan>
-                    <tspan id="flow-ev-lock" dx="6" fill="#94a3b8" font-size="12">?</tspan>
                   </text>
+                  
+                  <g id="flow-ev-lock" transform="translate(44, 50)"
+                     fill="none" stroke="#94a3b8" stroke-width="1.6"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="5" width="10" height="8" rx="1.5"></rect>
+                    <path id="flow-ev-lock-shackle"
+                          d="M3 5 V3.5 A3 3 0 0 1 9 3.5 V5"></path>
+                  </g>
                   <text class="flow-power" id="flow-ev-power" x="0" y="79" text-anchor="end">0.0 kW</text>
                   <text class="flow-arrow" id="flow-ev-arrow" x="8" y="79" text-anchor="middle"></text>
                   <text class="flow-pct" id="flow-ev-pct" x="16" y="79" text-anchor="start">--%</text>
@@ -2495,11 +2502,11 @@
       if (lockEl && shackle) {
         if (lockState === 'off') {
           // Verriegelt
-          lockEl.setAttribute('stroke', '#4ade80');
+          lockEl.setAttribute('stroke', '#ffffff');
           shackle.setAttribute('d', 'M3 5 V3.5 A3 3 0 0 1 9 3.5 V5');
         } else if (lockState === 'on') {
           // Entriegelt
-          lockEl.setAttribute('stroke', '#fb7185');
+          lockEl.setAttribute('stroke', '#94a3b8');
           shackle.setAttribute('d', 'M3 5 V3.5 A3 3 0 0 1 9 3.5 V1');
         } else {
           // Nicht verfügbar
