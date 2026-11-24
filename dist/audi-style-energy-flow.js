@@ -2463,7 +2463,7 @@
       }
 
       if (roofAGroup) {
-        roofAGroup.classList.toggle('roof-hidden', !(roofAPower > 0 || Number(roofADailyEnergy?.state) > 0 || roofACurrent > 0));
+        roofAGroup.classList.remove('roof-hidden');
       }
       if (roofBGroup) {
         roofBGroup.classList.remove('roof-hidden');
