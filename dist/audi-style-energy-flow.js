@@ -2502,11 +2502,14 @@
       
       if (lockEl && shackle && labelEl) {
         // Schloss automatisch rechts neben AUDI Q8 positionieren
-        const bbox = labelEl.getBBox();
-        const x = bbox.x + bbox.width + 6;
-        const y = bbox.y + (bbox.height - 13) / 2;
-      
-        lockEl.setAttribute('transform', `translate(${x}, ${y}) scale(0.8)`);
+        requestAnimationFrame(() => {
+          const bbox = labelEl.getBBox();
+          const x = bbox.x + bbox.width + 6;
+          const y = bbox.y + (bbox.height - 10.4) / 2;
+        
+          lockEl.setAttribute('transform',
+            `translate(${x}, ${y}) scale(0.8)`);
+        });
       
         if (lockState === 'off') {
           // Verschlossen: Weiß
