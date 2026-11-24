@@ -2510,12 +2510,12 @@
       
         if (lockState === 'off') {
           // Verschlossen: Weiß
-          lockEl.setAttribute('stroke', '#ffffff');
+          lockEl.setAttribute('stroke', '#94a3b8');
           shackle.setAttribute('d', 'M3 5 V3.5 A3 3 0 0 1 9 3.5 V5');
         } else if (lockState === 'on') {
           // Offen: Grau
-          lockEl.setAttribute('stroke', '#94a3b8');
-          shackle.setAttribute('d', 'M3 5 V3.5 A3 3 0 0 1 9 3.5 V1');
+          lockEl.setAttribute('stroke', '#ffffff');
+          shackle.setAttribute('d', 'M3 5 V2 A3 3 0 0 1 9 2 V2.5');
         } else {
           // Nicht verfügbar: Grau
           lockEl.setAttribute('stroke', '#94a3b8');
